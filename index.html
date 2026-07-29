@@ -81,12 +81,19 @@ to create a transparent, innovative and community-powered ecosystem.
 Contract:
 <br>
 0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7
-
+<button onclick="copyContract()" style="display:inline-block;padding:12px 24px;background:#00e5ff;color:black;border:none;border-radius:8px;font-weight:bold;cursor:pointer;margin-top:10px;">
+📋 Copy Contract
+</button>
 <br><br>
 
 Total Supply: 1,000,000,000 NETRA
 
 </footer>
-
+<script>
+function copyContract() {
+  navigator.clipboard.writeText("0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7");
+  alert("Contract copied!");
+}
+</script>
 </body>
 </html>
