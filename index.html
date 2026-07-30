@@ -67,6 +67,15 @@ margin-top:50px;
 padding:20px;
 color:#888;
 }
+#matrix{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+    opacity:0.35;
+}
 </style>
 <a href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" style="display:inline-block;padding:12px 24px;background:#f0b90b;color:black;text-decoration:none;border-radius:8px;margin:8px;font-weight:bold;">🚀 Buy on PancakeSwap</a>  
 <a href="https://t.me/NetraAIofficial" style="display:inline-block;padding:12px 24px;background:#0088cc;color:white;text-decoration:none;border-radius:8px;margin:8px;">💬 Join Telegram</a>
@@ -78,7 +87,7 @@ style="display:inline-block;padding:12px 24px;background:#4CAF50;color:white;tex
 </head>
 
 <body>
-
+<canvas id="matrix"></canvas>
 <header>
 
 <img src="./logo.png" width="180" alt="NETRA AI Logo">
@@ -137,6 +146,52 @@ function copyContract() {
   navigator.clipboard.writeText("0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7");
   alert("Contract copied!");
 }
+</script>
+<script>
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+
+const chars = "010101101001011010101001011";
+const fontSize = 16;
+let columns = Math.floor(canvas.width / fontSize);
+let drops = Array(columns).fill(1);
+
+function drawMatrix() {
+
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "#00ff66";
+    ctx.font = fontSize + "px monospace";
+
+    for(let i=0;i<drops.length;i++){
+
+        const text = chars[Math.floor(Math.random()*chars.length)];
+
+        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+        if(drops[i]*fontSize > canvas.height && Math.random()>0.975){
+            drops[i]=0;
+        }
+
+        drops[i]++;
+    }
+}
+
+setInterval(drawMatrix,35);
+
+window.addEventListener("resize",()=>{
+    resizeCanvas();
+    columns=Math.floor(canvas.width/fontSize);
+    drops=Array(columns).fill(1);
+});
 </script>
 </body>
 </html>
