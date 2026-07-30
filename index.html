@@ -102,13 +102,23 @@ padding:20px;
 display:inline-block;
 margin:10px;
 padding:14px 28px;
-background:#00d4ff;
-color:black;
+background:rgba(0,255,255,0.12);
+color:#ffffff;
 font-weight:bold;
-border-radius:8px;
+border:2px solid #00ffff;
+border-radius:12px;
 text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 10px rgba(0,255,255,.5);
 }
-
+.button:hover{
+background:#00ffff;
+color:#000;
+box-shadow:
+0 0 10px #00ffff,
+0 0 25px #00ffff,
+0 0 40px #00ffff;
+    }
 footer{
 margin-top:50px;
 padding:20px;
