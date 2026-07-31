@@ -497,6 +497,16 @@ box-shadow:0 0 5px #00ff66;
         max-width:360px !important;
     }
 }
+.roadmap{
+    direction:ltr !important;
+    justify-content:flex-start !important;
+    scroll-behavior:smooth;
+    touch-action:pan-x;
+}
+
+.roadmap .phase:first-child{
+    margin-left:0 !important;
+}
 </style>
 
 </head>
@@ -741,6 +751,29 @@ window.addEventListener("load", function () {
     }
 });
 </script>
-    
+<script>
+history.scrollRestoration = "manual";
+
+function resetRoadmap() {
+    const roadmap = document.querySelector(".roadmap");
+
+    if (!roadmap) return;
+
+    roadmap.style.scrollSnapType = "none";
+    roadmap.scrollLeft = 0;
+
+    requestAnimationFrame(() => {
+        roadmap.scrollLeft = 0;
+
+        setTimeout(() => {
+            roadmap.scrollTo(0, 0);
+            roadmap.style.scrollSnapType = "x mandatory";
+        }, 300);
+    });
+}
+
+window.addEventListener("load", resetRoadmap);
+window.addEventListener("pageshow", resetRoadmap);
+</script>
 </body>
 </html>
