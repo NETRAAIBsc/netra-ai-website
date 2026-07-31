@@ -193,6 +193,8 @@ padding:20px;
 backdrop-filter:blur(12px);
 box-shadow:0 0 20px rgba(0,255,255,.18);
 transition:.35s;
+position:relative;
+overflow:hidden;
 text-align:left;
 }
 
@@ -200,7 +202,30 @@ text-align:left;
 transform:translateY(-8px);
 box-shadow:0 0 30px #00ffff;
 }
+.phase::before{
 
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#00ffff,
+transparent
+);
+
+animation:scan 4s linear infinite;
+
+}
 .phase h3{
 margin-top:0;
 color:#00ffff;
@@ -258,6 +283,17 @@ border-radius:10px;
 margin-right:6px;
 box-shadow:0 0 8px rgba(30,136,229,.6);
 }
+@keyframes scan{
+
+0%{
+left:-100%;
+}
+
+100%{
+left:100%;
+}
+
+}
 </style>
 
 </head>
@@ -282,13 +318,15 @@ to create a transparent, innovative and community-powered ecosystem.
 <div class="hero-buttons">
 <a href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" style="display:inline-block;padding:12px 24px;background:#f0b90b;color:black;text-decoration:none;border-radius:8px;margin:8px;font-weight:bold;">🚀 Buy on PancakeSwap</a>  
 <a href="https://t.me/NetraAIofficial" style="display:inline-block;padding:12px 24px;background:#0088cc;color:white;text-decoration:none;border-radius:8px;margin:8px;">💬 Join Telegram</a>
+<a class="button" href="https://x.com/NETRAAI_BSC" target="_blank">
+𝕏 Follow on X
+</a>
 <a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" style="display:inline-block;padding:12px 24px;background:#2f80ed;color:white;text-decoration:none;border-radius:8px;margin:8px;font-weight:bold;">📄 View on BscScan</a>
 <a href="https://netraaibsc.github.io/netra-ai-website/whitepaper.md"
 style="display:inline-block;padding:12px 24px;background:#4CAF50;color:white;text-decoration:none;border-radius:8px;margin:8px;font-weight:bold;">
 📖 Read Whitepaper
 </a>
 </div>
-<a class="button" href="https://t.me/NetraAIofficial">Telegram</a>
 
 </header>
 
@@ -403,7 +441,21 @@ Upcoming
 <p><strong>Network:</strong> BNB Smart Chain (BEP-20)</p>
 
 <p><strong>Total Supply:</strong> 1,000,000,000 NETRA</p>
+<hr style="margin-top:60px;border-color:#00ffff33;">
 
+<h2>⚠️ Disclaimer</h2>
+
+<p style="font-size:15px;color:#cccccc;max-width:900px;">
+
+NETRA AI is a community-driven meme token built for entertainment, innovation, and community engagement.
+
+Cryptocurrency investments involve substantial risk and market volatility.
+
+Always Do Your Own Research (DYOR) before buying, selling, or holding any digital asset.
+
+Nothing on this website should be considered financial, legal, or investment advice.
+
+</p>
 </footer>
 <script>
 function copyContract() {
