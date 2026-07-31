@@ -439,6 +439,64 @@ box-shadow:0 0 5px #00ff66;
     }
 
 }
+/* ===== ROADMAP MOBILE SLIDER - FINAL ===== */
+
+.roadmap{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    gap:16px;
+    width:100%;
+    max-width:100%;
+    margin:30px auto 45px;
+    padding:18px 9vw 25px;
+    box-sizing:border-box;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:9vw;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+}
+
+.roadmap .phase{
+    flex:0 0 82vw !important;
+    width:82vw !important;
+    min-width:82vw !important;
+    max-width:82vw !important;
+    box-sizing:border-box;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+}
+
+.roadmap::-webkit-scrollbar{
+    height:5px;
+}
+
+.roadmap::-webkit-scrollbar-track{
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+}
+
+.roadmap::-webkit-scrollbar-thumb{
+    background:linear-gradient(90deg,#00ffff,#00ff88);
+    border-radius:20px;
+    box-shadow:0 0 10px #00ffff;
+}
+
+@media(min-width:768px){
+    .roadmap{
+        padding-left:40px;
+        padding-right:40px;
+        scroll-padding-left:40px;
+    }
+
+    .roadmap .phase{
+        flex-basis:360px !important;
+        width:360px !important;
+        min-width:360px !important;
+        max-width:360px !important;
+    }
+}
 </style>
 
 </head>
