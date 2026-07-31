@@ -177,19 +177,48 @@ box-shadow:0 0 20px rgba(0,255,100,.5);
 /* ===== ROADMAP ===== */
 
 .roadmap{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+display:flex;
+
+overflow-x:auto;
+
 gap:20px;
+
+padding:20px;
+
+scroll-snap-type:x mandatory;
+
+-webkit-overflow-scrolling:touch;
+
 margin:40px auto;
+
 max-width:1200px;
-padding:0 20px;
+
 }
 
+.roadmap::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.roadmap::-webkit-scrollbar-thumb{
+
+background:#00ffff;
+
+border-radius:20px;
+
+}
 .phase{
 background:rgba(255,255,255,.08);
 border:1px solid rgba(0,255,255,.35);
 border-radius:18px;
 padding:20px;
+
+min-width:320px;
+scroll-snap-align:center;
+flex-shrink:0;
+
 backdrop-filter:blur(12px);
 box-shadow:0 0 20px rgba(0,255,255,.18);
 transition:.35s;
@@ -370,6 +399,46 @@ box-shadow:0 0 5px #00ff66;
 }
 
 }
+.swipe-hint{
+    margin:5px auto 0;
+    padding:8px 16px;
+    width:max-content;
+    max-width:85%;
+    color:#9ffcff;
+    font-size:14px;
+    letter-spacing:1px;
+    background:rgba(0,255,255,.08);
+    border:1px solid rgba(0,255,255,.28);
+    border-radius:30px;
+    box-shadow:0 0 15px rgba(0,255,255,.15);
+    animation:swipeHint 1.8s ease-in-out infinite;
+}
+
+@keyframes swipeHint{
+    0%,100%{
+        transform:translateX(0);
+        opacity:.65;
+    }
+
+    50%{
+        transform:translateX(8px);
+        opacity:1;
+    }
+}
+@media(max-width:600px){
+
+    .roadmap{
+        padding:20px 10px;
+        gap:14px;
+    }
+
+    .phase{
+        min-width:82vw;
+        max-width:82vw;
+        padding:18px;
+    }
+
+}
 </style>
 
 </head>
@@ -429,6 +498,9 @@ Contract:
 Total Supply: 1,000,000,000 NETRA
 
 <h2>🚀 Roadmap</h2>
+
+<p class="swipe-hint">⬅️ Vuốt ngang để xem các Phase ➡️</p>
+
 <div class="roadmap">
 
 <div class="phase">
