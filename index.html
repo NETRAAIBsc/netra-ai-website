@@ -386,6 +386,64 @@ section{padding:72px 0}
     min-width:84vw;
   }
 }
+/* ===== NETRA LIVE CHART ===== */
+
+.chart-card{
+  width:100%;
+  padding:8px;
+  overflow:hidden;
+  border:1px solid rgba(0,245,255,.35);
+  border-radius:22px;
+  background:rgba(2,15,18,.88);
+  box-shadow:
+    0 0 25px rgba(0,245,255,.15),
+    inset 0 0 20px rgba(0,245,255,.04);
+}
+
+.chart-card iframe{
+  display:block;
+  width:100%;
+  height:600px;
+  border:0;
+  border-radius:16px;
+  background:#050a0d;
+}
+
+.chart-link{
+  width:max-content;
+  max-width:100%;
+  min-height:48px;
+  margin:18px auto 0;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#001014;
+  background:linear-gradient(90deg,#00f5ff,#00ff88);
+  border-radius:13px;
+  text-decoration:none;
+  font-weight:900;
+  box-shadow:0 0 20px rgba(0,245,255,.28);
+}
+
+@media(max-width:600px){
+
+  .chart-card{
+    padding:5px;
+    border-radius:17px;
+  }
+
+  .chart-card iframe{
+    height:500px;
+    border-radius:13px;
+  }
+
+  .chart-link{
+    width:100%;
+    font-size:14px;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -582,6 +640,38 @@ section{padding:72px 0}
     </article>
 
   </div>
+</section>
+
+<section id="live-chart">
+
+  <div class="container">
+
+    <div class="section-head">
+      <h2>📈 NETRA Live Chart</h2>
+      <p>Live market data powered by DEX Screener.</p>
+    </div>
+
+    <div class="chart-card">
+
+      <iframe
+        src="https://dexscreener.com/bsc/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7?embed=1&theme=dark&trades=0&info=0"
+        title="NETRA AI live chart"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+    <a
+      class="chart-link"
+      href="https://dexscreener.com/bsc/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7"
+      target="_blank"
+      rel="noopener">
+      📊 Open Full Chart on DEX Screener
+    </a>
+
+  </div>
+
 </section>
 
 <section id="tokenomics">
