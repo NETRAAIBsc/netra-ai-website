@@ -294,6 +294,82 @@ left:100%;
 }
 
 }
+.subtitle{
+
+font-size:18px;
+
+color:#99ffff;
+
+margin-top:-10px;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
+}
+
+.system-status{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+background:rgba(0,255,255,.08);
+
+border:1px solid rgba(0,255,255,.35);
+
+border-radius:30px;
+
+margin-bottom:25px;
+
+box-shadow:0 0 20px rgba(0,255,255,.15);
+
+}
+
+.online-dot{
+
+width:10px;
+
+height:10px;
+
+background:#00ff66;
+
+border-radius:50%;
+
+animation:pulse 1.5s infinite;
+
+}
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:0 0 5px #00ff66;
+
+}
+
+50%{
+
+transform:scale(1.4);
+
+box-shadow:0 0 18px #00ff66;
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:0 0 5px #00ff66;
+
+}
+
+}
 </style>
 
 </head>
@@ -305,7 +381,17 @@ left:100%;
 <img src="./logo.png" width="180" alt="NETRA AI Logo">
 
 <h1>NETRA AI</h1>
+<p class="subtitle">
+Artificial Intelligence • BNB Smart Chain • Community Powered
+</p>
 
+<div class="system-status">
+
+<span class="online-dot"></span>
+
+AI SYSTEM ONLINE
+
+</div>
 <h3 class="subtitle">
 Next Generation AI Meme Token
 </h3>
@@ -357,7 +443,7 @@ Completed
 <li>✅ Whitepaper</li>
 <li>✅ Website Launch</li>
 <li>✅ Telegram</li>
-<li><span class="coming">Coming Soon</span> Twitter / X</li>
+<li>✅ Twitter / X</li>
 </ul>
 
 </div>
