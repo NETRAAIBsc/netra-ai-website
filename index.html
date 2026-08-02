@@ -54,6 +54,23 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:#0a2b32;border:1px solid var(--line);padding:11px 15px;border-radius:11px;transition:.25s;z-index:99}.toast.show{opacity:1;transform:translate(-50%,0)}.positive{color:var(--green)}.negative{color:#ff6979}
 @media(max-width:900px){.menu{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:#031014;padding:14px 20px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links a{padding:10px}.grid{grid-template-columns:repeat(2,1fr)}.about,.community{grid-template-columns:1fr}.head{align-items:start;flex-direction:column}}
 @media(max-width:600px){section{padding:62px 0}.hero-card{padding:28px 14px}.logo-wrap{width:150px;height:150px}.logo-wrap img{width:128px;height:128px}.actions{display:grid;grid-template-columns:1fr 1fr}.contract code{max-width:210px}.ticker-grid{grid-template-columns:1fr 1fr}.tick:nth-child(2){border-right:0}.tick:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid,.features,.token-table{grid-template-columns:1fr}.phase{flex-basis:85vw}.chart{height:430px}.community-links{grid-template-columns:1fr}.footer{flex-direction:column;text-align:center}}
+
+.ai-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
+.system-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.system-row:last-child{border-bottom:0}.system-row span{color:var(--muted)}.system-row b{color:var(--green)}
+.score-card{display:grid;place-items:center;text-align:center;min-height:300px}
+.score-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0 78%,rgba(0,245,255,.12) 78%);position:relative;box-shadow:0 0 30px rgba(0,245,255,.22)}
+.score-ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:#031014}.score-ring div{position:relative;z-index:2}.score-ring b{display:block;font-size:42px}.score-ring span{font-size:12px;color:var(--muted)}
+.supply-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}.supply-card{display:grid;place-items:center;text-align:center;min-height:310px}
+.supply-ring{width:205px;height:205px;border:16px solid rgba(0,245,255,.16);border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 25px rgba(0,245,255,.12),0 0 28px rgba(0,245,255,.12)}
+.supply-ring b{display:block;font-size:42px;color:var(--cyan)}.supply-ring span{color:var(--muted)}
+.fact-list{display:grid;gap:10px}.fact{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border:1px solid var(--line);border-radius:13px;background:#06161b}.fact span{color:var(--muted)}.fact code{word-break:break-all;color:var(--cyan);text-align:right}
+.infrastructure{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.infra{text-align:center;text-decoration:none}.infra b{display:block;color:var(--cyan);font-size:18px;margin-bottom:7px}.infra span{color:var(--muted);font-size:13px}
+.faq{display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,var(--panel2),var(--panel));padding:0 18px}.faq summary{cursor:pointer;font-weight:900;padding:18px 0}.faq details p{margin:0 0 18px;color:var(--muted);line-height:1.7}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.ai-grid,.supply-layout{grid-template-columns:1fr}.infrastructure{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.infrastructure{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -63,7 +80,7 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.
   <a class="brand" href="#home"><img src="logo.png" alt="NETRA AI logo"><span>NETRA AI</span></a>
   <button class="menu" id="menu">☰</button>
   <div class="nav-links" id="nav">
-   <a href="#market">Market</a><a href="#about">About</a><a href="#roadmap">Roadmap</a><a href="#news">News</a><a href="#community">Community</a><a href="whitepaper.html">Whitepaper</a>
+   <a href="#market">Market</a><a href="#about">About</a><a href="#dashboard">Dashboard</a><a href="#roadmap">Roadmap</a><a href="#news">News</a><a href="#faq">FAQ</a><a href="whitepaper.html">Whitepaper</a>
   </div>
  </div>
 </nav>
@@ -117,8 +134,25 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.
  </div>
 </div></section>
 
+<section id="dashboard"><div class="container">
+ <div class="head"><div><span class="kicker">AI dashboard</span><h2>System transparency</h2></div><p>This dashboard reports public website and market connections. It is not a smart-contract security audit.</p></div>
+ <div class="ai-grid">
+  <div class="card">
+   <div class="system-row"><span>Website status</span><b>ONLINE</b></div>
+   <div class="system-row"><span>BNB Chain connection</span><b>ACTIVE</b></div>
+   <div class="system-row"><span>DEX market feed</span><b id="dexStatus">CONNECTING</b></div>
+   <div class="system-row"><span>Official contract published</span><b>YES</b></div>
+   <div class="system-row"><span>Whitepaper available</span><b>YES</b></div>
+  </div>
+  <div class="card score-card">
+   <div class="score-ring"><div><b>5/5</b><span>public links online</span></div></div>
+   <p>Website · Whitepaper · BscScan · DEX Screener · Community</p>
+  </div>
+ </div>
+</div></section>
+
 <section id="roadmap"><div class="container">
- <div class="head"><div><span class="kicker">Execution plan</span><h2>Roadmap</h2></div><p>Swipe horizontally on mobile.</p></div>
+ <div class="head"><div><span class="kicker">Execution plan</span><h2>Roadmap</h2></div><p>Vuốt ngang trên thiết bị di động.</p></div>
  <div class="roadmap">
   <article class="card phase done"><div class="phase-top"><span>PHASE 01</span><b class="badge">COMPLETED</b></div><h3>Foundation & Launch</h3><ul><li>Smart Contract (BEP-20)</li><li>Whitepaper</li><li>Website Launch</li><li>Telegram</li><li>Twitter / X</li><li>PancakeSwap Listing</li><li>DexScreener Listing</li></ul></article>
   <article class="card phase active"><div class="phase-top"><span>PHASE 02</span><b class="badge">IN PROGRESS</b></div><h3>Trust & Visibility</h3><ul><li>CoinMarketCap Listing</li><li>CoinGecko Listing</li><li>Trust Wallet Logo</li><li>Token Logo on Major Wallets</li><li>10,000+ Holders</li><li>Liquidity Target: 100–200 BNB</li></ul></article>
@@ -141,12 +175,39 @@ footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.
 </div></section>
 
 <section id="tokenomics"><div class="container">
- <div class="head"><div><span class="kicker">Token information</span><h2>On-chain facts</h2></div><p>Always verify the contract and holder distribution directly on BscScan.</p></div>
- <div class="token-table">
-  <div class="card token-item"><span>Name</span><b>NETRA AI</b></div><div class="card token-item"><span>Symbol</span><b>NETRA</b></div>
-  <div class="card token-item"><span>Network</span><b>BNB Smart Chain</b></div><div class="card token-item"><span>Standard</span><b>BEP-20</b></div>
-  <div class="card token-item"><span>Total supply</span><b>1,000,000,000</b></div><div class="card token-item"><span>Decimals</span><b>18</b></div>
-  <div class="card token-item" style="grid-column:1/-1"><span>Contract</span><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div>
+ <div class="head"><div><span class="kicker">Token information</span><h2>Supply & on-chain facts</h2></div><p>No invented allocation chart is shown. Current holder distribution should always be verified directly on BscScan.</p></div>
+ <div class="supply-layout">
+  <div class="card supply-card"><div class="supply-ring"><div><b>1B</b><span>Total NETRA supply</span></div></div></div>
+  <div class="card fact-list">
+   <div class="fact"><span>Name</span><b>NETRA AI</b></div>
+   <div class="fact"><span>Symbol</span><b>NETRA</b></div>
+   <div class="fact"><span>Network</span><b>BNB Smart Chain</b></div>
+   <div class="fact"><span>Standard</span><b>BEP-20</b></div>
+   <div class="fact"><span>Decimals</span><b>18</b></div>
+   <div class="fact"><span>Contract</span><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt" id="infrastructure"><div class="container">
+ <div class="head"><div><span class="kicker">Infrastructure</span><h2>Public services used by NETRA AI</h2></div><p>These are infrastructure and tracking services, not claims of commercial partnership.</p></div>
+ <div class="infrastructure">
+  <a class="card infra" href="https://www.bnbchain.org/" target="_blank" rel="noopener"><b>BNB Chain</b><span>Blockchain network</span></a>
+  <a class="card infra" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>PancakeSwap</b><span>DEX trading</span></a>
+  <a class="card infra" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener"><b>DEX Screener</b><span>Market tracking</span></a>
+  <a class="card infra" href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>BscScan</b><span>On-chain explorer</span></a>
+ </div>
+</div></section>
+
+<section id="faq"><div class="container">
+ <div class="head"><div><span class="kicker">FAQ</span><h2>Common questions</h2></div><p>Quick answers for new visitors.</p></div>
+ <div class="faq">
+  <details><summary>What is NETRA AI?</summary><p>NETRA AI is a community-driven AI-themed BEP-20 token on BNB Smart Chain.</p></details>
+  <details><summary>Where can I buy NETRA?</summary><p>NETRA trades through PancakeSwap V2. Always use the official contract shown on this website.</p></details>
+  <details><summary>What is the total supply?</summary><p>The total supply is 1,000,000,000 NETRA with 18 decimals.</p></details>
+  <details><summary>How can I verify the contract?</summary><p>Open the official BscScan link and confirm the full contract address.</p></details>
+  <details><summary>Is NETRA guaranteed to increase in price?</summary><p>No. Cryptoassets are volatile and no return, listing, liquidity target or roadmap milestone is guaranteed.</p></details>
+  <details><summary>Does the project control every large holder?</summary><p>No. Independent wallets may buy, hold, transfer or sell tokens without project control. Check holder distribution on BscScan.</p></details>
  </div>
 </div></section>
 
@@ -177,7 +238,7 @@ async function market(){
   const [a,b]=await Promise.all([fetch(CG_API),fetch(PAIR_API)]);
   const cg=await a.json(),d=await b.json(),p=d.pair||d.pairs?.[0];
   [["btc",cg.bitcoin],["eth",cg.ethereum],["bnb",cg.binancecoin]].forEach(([id,x])=>{$(id+"P").textContent=money(x.usd);$(id+"C").textContent=pct(x.usd_24h_change);$(id+"C").className=cls(x.usd_24h_change)});
-  if(p){$("netraP").textContent=money(p.priceUsd);$("netraC").textContent=pct(p.priceChange?.h24);$("netraC").className=cls(p.priceChange?.h24);$("mPrice").textContent=money(p.priceUsd);$("mChange").textContent="24h change "+pct(p.priceChange?.h24);$("mChange").className=cls(p.priceChange?.h24);$("mLiq").textContent=money(p.liquidity?.usd,true);$("mVol").textContent=money(p.volume?.h24,true);$("mTx").textContent=(p.txns?.h24?.buys||0)+(p.txns?.h24?.sells||0);$("mFdv").textContent=money(p.fdv,true)}
+  if(p){$("netraP").textContent=money(p.priceUsd);$("netraC").textContent=pct(p.priceChange?.h24);$("netraC").className=cls(p.priceChange?.h24);$("mPrice").textContent=money(p.priceUsd);$("mChange").textContent="24h change "+pct(p.priceChange?.h24);$("mChange").className=cls(p.priceChange?.h24);$("mLiq").textContent=money(p.liquidity?.usd,true);$("mVol").textContent=money(p.volume?.h24,true);$("mTx").textContent=(p.txns?.h24?.buys||0)+(p.txns?.h24?.sells||0);$("mFdv").textContent=money(p.fdv,true);if($("dexStatus"))$("dexStatus").textContent="ACTIVE"}
  }catch(e){console.warn(e)}
 }
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");$(b.dataset.tab).classList.add("active");if(b.dataset.tab==="crypto")loadNews()});
@@ -198,7 +259,7 @@ async function loadNews(){
  if(items.length)target.innerHTML=items.slice(0,6).map(i=>`<a class="card news-card" href="${i.url}" target="_blank" rel="noopener"><div class="news-meta"><span>${i.source}</span><time>${i.date}</time></div><h3>${i.title}</h3><p>${i.excerpt}</p><span class="read">Read original ↗</span></a>`).join("");
  else $("feedStatus").textContent="Live feed temporarily unavailable";
 }
-const canvas=$("matrix"),ctx=canvas.getContext("2d");let drops=[],fs=16;function resize(){canvas.width=innerWidth;canvas.height=innerHeight;drops=Array(Math.ceil(innerWidth/fs)).fill(1)}function draw(){ctx.fillStyle="rgba(0,0,0,.065)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff66";ctx.font=fs+"px monospace";drops.forEach((y,i)=>{ctx.fillText(Math.random()>.5?"1":"0",i*fs,y*fs);drops[i]=(y*fs>canvas.height&&Math.random()>.975)?0:y+1})}resize();setInterval(draw,42);addEventListener("resize",resize);market();setInterval(market,120000);
+const canvas=$("matrix"),ctx=canvas.getContext("2d");let drops=[],fs=16;function resize(){canvas.width=innerWidth;canvas.height=innerHeight;drops=Array(Math.ceil(innerWidth/fs)).fill(1)}function draw(){ctx.fillStyle="rgba(0,0,0,.065)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff66";ctx.font=fs+"px monospace";drops.forEach((y,i)=>{ctx.fillText(Math.random()>.5?"1":"0",i*fs,y*fs);drops[i]=(y*fs>canvas.height&&Math.random()>.975)?0:y+1})}resize();setInterval(draw,42);addEventListener("resize",resize);market();setInterval(market,120000);const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll("section .card,section .head,section .about>div,section .community>div").forEach(el=>{el.classList.add("reveal");obs.observe(el)});
 </script>
 </body>
 </html>
