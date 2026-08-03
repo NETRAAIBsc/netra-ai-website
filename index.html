@@ -19,663 +19,113 @@
 <meta name="twitter:image" content="https://netraai.xyz/aibg.jpg.png">
 <link rel="icon" href="logo.png">
 <link rel="manifest" href="manifest.json">
-
 <link rel="preconnect" href="https://api.dexscreener.com">
 <link rel="preconnect" href="https://dexscreener.com">
 <link rel="preconnect" href="https://api.coingecko.com">
-
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"NETRA AI",
-  "url":"https://netraai.xyz",
-  "logo":"https://netraai.xyz/logo.png",
-  "sameAs":["https://x.com/NETRAAI_BSC","https://t.me/NetraAIofficial"],
-  "description":"Community-driven AI meme token on BNB Smart Chain."
-}
+{"@context":"https://schema.org","@type":"Organization","name":"NETRA AI","url":"https://netraai.xyz","logo":"https://netraai.xyz/logo.png","sameAs":["https://x.com/NETRAAI_BSC","https://t.me/NetraAIofficial"],"description":"Community-driven AI meme token on BNB Smart Chain."}
 </script>
 <style>
-:root{
- --bg:#020609;--panel:rgba(4,18,22,.78);--panel2:rgba(2,13,17,.92);
- --cyan:#00f5ff;--green:#00ff88;--yellow:#f0b90b;--blue:#2f80ed;
- --text:#f5fbff;--muted:#a9c5ca;--line:rgba(0,245,255,.26);--radius:22px;
-}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,.88)),url("aibg.jpg.png") center/cover fixed no-repeat;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 0,rgba(0,245,255,.16),transparent 34%),linear-gradient(180deg,transparent,rgba(0,255,136,.05))}
-#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-2;opacity:.22;pointer-events:none}
-.container{width:min(1160px,calc(100% - 28px));margin:auto}section{padding:82px 0}a{color:inherit}
+:root{--bg:#020609;--panel:rgba(4,18,22,.78);--panel2:rgba(2,13,17,.92);--cyan:#00f5ff;--green:#00ff88;--yellow:#f0b90b;--blue:#2f80ed;--text:#f5fbff;--muted:#a9c5ca;--line:rgba(0,245,255,.26);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,.88)),url("aibg.jpg.png") center/cover fixed no-repeat;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 50% 0,rgba(0,245,255,.16),transparent 34%),linear-gradient(180deg,transparent,rgba(0,255,136,.05))}#matrix{position:fixed;inset:0;width:100%;height:100%;z-index:-2;opacity:.22;pointer-events:none}.container{width:min(1160px,calc(100% - 28px));margin:auto}section{padding:82px 0}a{color:inherit}
 .navbar{position:sticky;top:0;z-index:50;background:rgba(0,8,11,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:1px}.brand img{width:42px;height:42px;border-radius:50%;border:1px solid var(--cyan);box-shadow:0 0 15px rgba(0,245,255,.5)}.nav-links{display:flex;gap:17px;align-items:center}.nav-links a{text-decoration:none;font-size:14px;font-weight:800;color:#ddfbff}.nav-links a:hover{color:var(--cyan)}.menu{display:none;background:none;border:0;color:#fff;font-size:25px}
 .hero{min-height:calc(100vh - 68px);display:grid;place-items:center;padding:62px 0 42px}.hero-card{width:min(940px,100%);padding:40px 24px;text-align:center;border:1px solid var(--line);border-radius:30px;background:linear-gradient(180deg,rgba(2,16,20,.80),rgba(2,10,13,.64));backdrop-filter:blur(13px);box-shadow:0 0 55px rgba(0,245,255,.14)}.logo-wrap{width:170px;height:170px;margin:auto;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(0,245,255,.18),transparent 66%);border:1px solid var(--line);box-shadow:0 0 30px rgba(0,245,255,.23)}.logo-wrap img{width:145px;height:145px;object-fit:contain;border-radius:50%}.hero-kicker,.kicker{color:var(--cyan);font-size:12px;letter-spacing:.16em;font-weight:900;text-transform:uppercase}h1{font-size:clamp(52px,9vw,92px);margin:18px 0 8px;letter-spacing:.08em;color:var(--cyan);text-shadow:0 0 24px rgba(0,245,255,.7)}.status{display:inline-flex;align-items:center;gap:8px;margin:8px 0 18px;font-weight:900;letter-spacing:.1em}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}.hero-text{max-width:760px;margin:auto;color:#d4e8eb;line-height:1.8;font-size:17px}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:27px 0}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:13px;text-decoration:none;font-weight:900;border:1px solid var(--line);background:rgba(5,21,25,.86)}.btn.primary{background:linear-gradient(90deg,var(--cyan),var(--green));color:#001014;border:0}.contract{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px;border:1px solid var(--line);border-radius:15px;background:rgba(2,13,17,.82);text-align:left}.contract small{display:block;color:var(--muted);font-size:10px;letter-spacing:.13em;margin-bottom:5px}.contract code{display:block;max-width:680px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#dbffff}.copy{border:0;border-radius:10px;background:#0c333a;color:var(--cyan);font-weight:900;padding:10px 14px}
 .ticker{border-block:1px solid var(--line);background:rgba(2,13,17,.9)}.ticker-grid{display:grid;grid-template-columns:repeat(4,1fr)}.tick{padding:16px 20px;border-right:1px solid var(--line)}.tick:last-child{border:0}.tick span{color:var(--muted);font-size:11px;font-weight:900}.tick b{display:block;font-size:20px;margin:5px 0}.tick em{font-style:normal;font-size:12px}
 .head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}.head h2{font-size:clamp(35px,5vw,55px);margin:7px 0 0}.head p{max-width:530px;color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:23px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 16px 45px rgba(0,0,0,.28)}.metric span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.11em}.metric b{display:block;font-size:29px;margin:10px 0 5px}.metric small{color:#a9c5ca}.chart{height:520px;margin-top:17px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#05090c}.chart iframe{width:100%;height:100%;border:0}
-.alt{background:linear-gradient(180deg,rgba(0,245,255,.025),rgba(0,255,136,.02));border-block:1px solid rgba(0,245,255,.08)}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.about p{color:var(--muted);line-height:1.8}.features{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature h3{color:var(--cyan);margin:20px 0 9px}.feature p{margin:0}
-.roadmap{display:flex;gap:15px;overflow-x:auto;padding:3px 2px 20px;scroll-snap-type:x mandatory}.phase{flex:0 0 335px;min-height:405px;scroll-snap-align:start}.phase-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em}.badge{padding:6px 9px;border-radius:999px;background:#17343a;font-weight:900}.done .badge{background:var(--green);color:#00130a}.active .badge{background:var(--yellow);color:#1b1300}.phase h3{font-size:26px;margin:30px 0 20px}.phase ul{padding-left:20px;color:#d3e4e7}.phase li{margin:11px 0;line-height:1.45}
+.alt{background:linear-gradient(180deg,rgba(0,245,255,.025),rgba(0,255,136,.02));border-block:1px solid rgba(0,245,255,.08)}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.about p{color:var(--muted);line-height:1.8}.features{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature h3{color:var(--cyan);margin:20px 0 9px}.feature p{margin:0}.roadmap{display:flex;gap:15px;overflow-x:auto;padding:3px 2px 20px;scroll-snap-type:x mandatory}.phase{flex:0 0 335px;min-height:405px;scroll-snap-align:start}.phase-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em}.badge{padding:6px 9px;border-radius:999px;background:#17343a;font-weight:900}.done .badge{background:var(--green);color:#00130a}.active .badge{background:var(--yellow);color:#1b1300}.phase h3{font-size:26px;margin:30px 0 20px}.phase ul{padding-left:20px;color:#d3e4e7}.phase li{margin:11px 0;line-height:1.45}
 .news-tabs{display:flex;gap:8px;margin-bottom:18px}.tab{border:1px solid var(--line);background:#06171c;color:#c4dde2;border-radius:12px;padding:11px 15px;font-weight:900}.tab.active{background:linear-gradient(90deg,var(--cyan),var(--green));color:#001014;border-color:transparent}.panel{display:none}.panel.active{display:grid}.news-card{min-height:270px;display:flex;flex-direction:column;text-decoration:none}.news-meta{display:flex;justify-content:space-between;gap:10px;color:var(--cyan);font-size:10px;text-transform:uppercase;letter-spacing:.1em}.news-card h3{font-size:21px;line-height:1.35;margin:26px 0 12px}.news-card p{color:var(--muted);line-height:1.65;margin:0}.read{margin-top:auto;padding-top:20px;font-weight:900}.news-note{margin-top:16px;color:#bcd0d4;line-height:1.7}
-.token-table{display:grid;grid-template-columns:1fr 1fr;gap:12px}.token-item{display:flex;justify-content:space-between;gap:14px}.token-item span{color:var(--muted)}.token-item code{word-break:break-all;color:var(--cyan)}
-.community{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.community-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}.community-links a{padding:17px;border:1px solid var(--line);border-radius:13px;background:#06161b;text-decoration:none;font-weight:900}
-.disclaimer{border-color:rgba(240,185,11,.45);background:linear-gradient(180deg,rgba(72,52,0,.38),rgba(20,16,1,.68))}.disclaimer h3{color:#ffd54a}.disclaimer p{color:#e7ecee;line-height:1.8}
-footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.footer{display:flex;justify-content:space-between;align-items:center;gap:18px}.footer a{text-decoration:none;margin-left:13px}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:#0a2b32;border:1px solid var(--line);padding:11px 15px;border-radius:11px;transition:.25s;z-index:99}.toast.show{opacity:1;transform:translate(-50%,0)}.positive{color:var(--green)}.negative{color:#ff6979}
-@media(max-width:900px){.menu{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:#031014;padding:14px 20px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links a{padding:10px}.grid{grid-template-columns:repeat(2,1fr)}.about,.community{grid-template-columns:1fr}.head{align-items:start;flex-direction:column}}
-@media(max-width:600px){section{padding:62px 0}.hero-card{padding:28px 14px}.logo-wrap{width:150px;height:150px}.logo-wrap img{width:128px;height:128px}.actions{display:grid;grid-template-columns:1fr 1fr}.contract code{max-width:210px}.ticker-grid{grid-template-columns:1fr 1fr}.tick:nth-child(2){border-right:0}.tick:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid,.features,.token-table{grid-template-columns:1fr}.phase{flex-basis:85vw}.chart{height:430px}.community-links{grid-template-columns:1fr}.footer{flex-direction:column;text-align:center}}
-
-.ai-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
-.system-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
-.system-row:last-child{border-bottom:0}.system-row span{color:var(--muted)}.system-row b{color:var(--green)}
-.score-card{display:grid;place-items:center;text-align:center;min-height:300px}
-.score-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0 78%,rgba(0,245,255,.12) 78%);position:relative;box-shadow:0 0 30px rgba(0,245,255,.22)}
-.score-ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:#031014}.score-ring div{position:relative;z-index:2}.score-ring b{display:block;font-size:42px}.score-ring span{font-size:12px;color:var(--muted)}
-.supply-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}.supply-card{display:grid;place-items:center;text-align:center;min-height:310px}
-.supply-ring{width:205px;height:205px;border:16px solid rgba(0,245,255,.16);border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 25px rgba(0,245,255,.12),0 0 28px rgba(0,245,255,.12)}
-.supply-ring b{display:block;font-size:42px;color:var(--cyan)}.supply-ring span{color:var(--muted)}
-.fact-list{display:grid;gap:10px}.fact{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border:1px solid var(--line);border-radius:13px;background:#06161b}.fact span{color:var(--muted)}.fact code{word-break:break-all;color:var(--cyan);text-align:right}
-.infrastructure{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.infra{text-align:center;text-decoration:none}.infra b{display:block;color:var(--cyan);font-size:18px;margin-bottom:7px}.infra span{color:var(--muted);font-size:13px}
-.faq{display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,var(--panel2),var(--panel));padding:0 18px}.faq summary{cursor:pointer;font-weight:900;padding:18px 0}.faq details p{margin:0 0 18px;color:var(--muted);line-height:1.7}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.ai-grid,.supply-layout{grid-template-columns:1fr}.infrastructure{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.infrastructure{grid-template-columns:1fr}}
-
-
-/* === NETRA AI visual upgrades === */
-.logo-wrap{
-  position:relative;
-  animation:logoPulse 2.8s ease-in-out infinite;
-}
-.logo-wrap::before,
-.logo-wrap::after{
-  content:"";
-  position:absolute;
-  inset:-10px;
-  border-radius:50%;
-  border:1px solid rgba(0,245,255,.35);
-  box-shadow:0 0 22px rgba(0,245,255,.34);
-  animation:logoRing 2.8s ease-in-out infinite;
-  pointer-events:none;
-}
-.logo-wrap::after{
-  inset:-20px;
-  opacity:.45;
-  animation-delay:1.4s;
-}
-.logo-wrap img{
-  filter:drop-shadow(0 0 14px rgba(0,245,255,.55));
-}
-@keyframes logoPulse{
-  0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(0,245,255,.24)}
-  50%{transform:scale(1.025);box-shadow:0 0 46px rgba(0,245,255,.48)}
-}
-@keyframes logoRing{
-  0%,100%{transform:scale(.97);opacity:.35}
-  50%{transform:scale(1.05);opacity:.9}
-}
-
-.chart{
-  position:relative;
-  min-height:520px;
-  background:
-    radial-gradient(circle at 50% 35%,rgba(0,245,255,.08),transparent 38%),
-    #05090c;
-}
-.chart::before{
-  content:"Loading live NETRA / WBNB chart…";
-  position:absolute;
-  inset:0;
-  display:grid;
-  place-items:center;
-  color:#9dcbd0;
-  font-size:14px;
-  letter-spacing:.04em;
-  z-index:0;
-}
-.chart.loaded::before{display:none}
-.chart iframe{
-  position:relative;
-  z-index:1;
-  opacity:0;
-  transition:opacity .55s ease,filter .55s ease;
-  filter:saturate(.9) contrast(.97);
-}
-.chart.loaded iframe{
-  opacity:1;
-  filter:saturate(1.06) contrast(1.03);
-}
-.chart-badge{
-  position:absolute;
-  top:14px;
-  right:14px;
-  z-index:3;
-  display:flex;
-  align-items:center;
-  gap:7px;
-  padding:8px 11px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(2,13,17,.88);
-  color:var(--green);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.08em;
-  pointer-events:none;
-}
-.chart-badge::before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 10px var(--green);
-}
-
-.phase{
-  position:relative;
-  overflow:hidden;
-  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
-}
-.phase::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg,transparent 10%,rgba(0,245,255,.08),transparent 72%);
-  transform:translateX(-120%);
-  transition:transform .7s ease;
-  pointer-events:none;
-}
-.phase:hover{
-  transform:translateY(-8px);
-  border-color:rgba(0,245,255,.62);
-  box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 26px rgba(0,245,255,.18);
-}
-.phase:hover::before{transform:translateX(120%)}
-.phase.done:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(0,255,136,.22)}
-.phase.active:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(240,185,11,.20)}
-
-.counter-card{
-  position:relative;
-  overflow:hidden;
-}
-.counter-card::after{
-  content:"";
-  position:absolute;
-  right:-36px;
-  bottom:-46px;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(0,245,255,.16),transparent 68%);
-  pointer-events:none;
-}
-.counter-value{
-  display:block;
-  font-size:29px;
-  margin:10px 0 5px;
-  font-variant-numeric:tabular-nums;
-}
-
-#backToTop{
-  position:fixed;
-  right:18px;
-  bottom:20px;
-  width:48px;
-  height:48px;
-  border:1px solid var(--line);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(180deg,rgba(5,29,35,.96),rgba(2,13,17,.96));
-  color:var(--cyan);
-  font-size:22px;
-  font-weight:900;
-  box-shadow:0 0 24px rgba(0,245,255,.23);
-  cursor:pointer;
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(14px);
-  transition:.25s ease;
-  z-index:80;
-}
-#backToTop.show{
-  opacity:1;
-  visibility:visible;
-  transform:none;
-}
-#backToTop:hover{
-  transform:translateY(-3px);
-  box-shadow:0 0 32px rgba(0,245,255,.42);
-}
-
-@media(max-width:600px){
-  .phase:hover{transform:none}
-  .chart{min-height:430px}
-  #backToTop{right:12px;bottom:14px;width:44px;height:44px}
-}
-@media(prefers-reduced-motion:reduce){
-  .logo-wrap,.logo-wrap::before,.logo-wrap::after{animation:none!important}
-  .phase,.phase::before,.chart iframe,#backToTop{transition:none!important}
-}
-
-
-#holderStatus a{text-decoration:none;color:#a9c5ca}
-#holderStatus a:hover{color:var(--cyan)}
-#mHolders{font-variant-numeric:tabular-nums}
-
+.token-table{display:grid;grid-template-columns:1fr 1fr;gap:12px}.token-item{display:flex;justify-content:space-between;gap:14px}.token-item span{color:var(--muted)}.token-item code{word-break:break-all;color:var(--cyan)}.community{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.community-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}.community-links a{padding:17px;border:1px solid var(--line);border-radius:13px;background:#06161b;text-decoration:none;font-weight:900}.disclaimer{border-color:rgba(240,185,11,.45);background:linear-gradient(180deg,rgba(72,52,0,.38),rgba(20,16,1,.68))}.disclaimer h3{color:#ffd54a}.disclaimer p{color:#e7ecee;line-height:1.8}footer{padding:32px 0 42px;border-top:1px solid var(--line);color:var(--muted)}.footer{display:flex;justify-content:space-between;align-items:center;gap:18px}.footer a{text-decoration:none;margin-left:13px}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:#0a2b32;border:1px solid var(--line);padding:11px 15px;border-radius:11px;transition:.25s;z-index:99}.toast.show{opacity:1;transform:translate(-50%,0)}.positive{color:var(--green)}.negative{color:#ff6979}
+@media(max-width:900px){.menu{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:#031014;padding:14px 20px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links a{padding:10px}.grid{grid-template-columns:repeat(2,1fr)}.about,.community{grid-template-columns:1fr}.head{align-items:start;flex-direction:column}}@media(max-width:600px){section{padding:62px 0}.hero-card{padding:28px 14px}.logo-wrap{width:150px;height:150px}.logo-wrap img{width:128px;height:128px}.actions{display:grid;grid-template-columns:1fr 1fr}.contract code{max-width:210px}.ticker-grid{grid-template-columns:1fr 1fr}.tick:nth-child(2){border-right:0}.tick:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid,.features,.token-table{grid-template-columns:1fr}.phase{flex-basis:85vw}.chart{height:430px}.community-links{grid-template-columns:1fr}.footer{flex-direction:column;text-align:center}}
+.ai-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}.system-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}.system-row:last-child{border-bottom:0}.system-row span{color:var(--muted)}.system-row b{color:var(--green)}.score-card{display:grid;place-items:center;text-align:center;min-height:300px}.score-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0 78%,rgba(0,245,255,.12) 78%);position:relative;box-shadow:0 0 30px rgba(0,245,255,.22)}.score-ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:#031014}.score-ring div{position:relative;z-index:2}.score-ring b{display:block;font-size:42px}.score-ring span{font-size:12px;color:var(--muted)}.supply-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}.supply-card{display:grid;place-items:center;text-align:center;min-height:310px}.supply-ring{width:205px;height:205px;border:16px solid rgba(0,245,255,.16);border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 25px rgba(0,245,255,.12),0 0 28px rgba(0,245,255,.12)}.supply-ring b{display:block;font-size:42px;color:var(--cyan)}.supply-ring span{color:var(--muted)}.fact-list{display:grid;gap:10px}.fact{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border:1px solid var(--line);border-radius:13px;background:#06161b}.fact span{color:var(--muted)}.fact code{word-break:break-all;color:var(--cyan);text-align:right}.infrastructure{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.infra{text-align:center;text-decoration:none}.infra b{display:block;color:var(--cyan);font-size:18px;margin-bottom:7px}.infra span{color:var(--muted);font-size:13px}.faq{display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,var(--panel2),var(--panel));padding:0 18px}.faq summary{cursor:pointer;font-weight:900;padding:18px 0}.faq details p{margin:0 0 18px;color:var(--muted);line-height:1.7}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}@media(max-width:900px){.ai-grid,.supply-layout{grid-template-columns:1fr}.infrastructure{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.infrastructure{grid-template-columns:1fr}}
+.logo-wrap{position:relative;animation:logoPulse 2.8s ease-in-out infinite}.logo-wrap::before,.logo-wrap::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(0,245,255,.35);box-shadow:0 0 22px rgba(0,245,255,.34);animation:logoRing 2.8s ease-in-out infinite;pointer-events:none}.logo-wrap::after{inset:-20px;opacity:.45;animation-delay:1.4s}.logo-wrap img{filter:drop-shadow(0 0 14px rgba(0,245,255,.55))}@keyframes logoPulse{0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(0,245,255,.24)}50%{transform:scale(1.025);box-shadow:0 0 46px rgba(0,245,255,.48)}}@keyframes logoRing{0%,100%{transform:scale(.97);opacity:.35}50%{transform:scale(1.05);opacity:.9}}
+.chart{position:relative;min-height:520px;background:radial-gradient(circle at 50% 35%,rgba(0,245,255,.08),transparent 38%),#05090c}.chart::before{content:"Loading live NETRA / WBNB chart…";position:absolute;inset:0;display:grid;place-items:center;color:#9dcbd0;font-size:14px;letter-spacing:.04em;z-index:0}.chart.loaded::before{display:none}.chart iframe{position:relative;z-index:1;opacity:0;transition:opacity .55s ease,filter .55s ease;filter:saturate(.9) contrast(.97)}.chart.loaded iframe{opacity:1;filter:saturate(1.06) contrast(1.03)}.chart-badge{position:absolute;top:14px;right:14px;z-index:3;display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(2,13,17,.88);color:var(--green);font-size:11px;font-weight:900;letter-spacing:.08em;pointer-events:none}.chart-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}.phase{position:relative;overflow:hidden;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}.phase::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 10%,rgba(0,245,255,.08),transparent 72%);transform:translateX(-120%);transition:transform .7s ease;pointer-events:none}.phase:hover{transform:translateY(-8px);border-color:rgba(0,245,255,.62);box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 26px rgba(0,245,255,.18)}.phase:hover::before{transform:translateX(120%)}.phase.done:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(0,255,136,.22)}.phase.active:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(240,185,11,.20)}.counter-card{position:relative;overflow:hidden}.counter-card::after{content:"";position:absolute;right:-36px;bottom:-46px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,255,.16),transparent 68%);pointer-events:none}.counter-value{display:block;font-size:29px;margin:10px 0 5px;font-variant-numeric:tabular-nums}#backToTop{position:fixed;right:18px;bottom:20px;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,rgba(5,29,35,.96),rgba(2,13,17,.96));color:var(--cyan);font-size:22px;font-weight:900;box-shadow:0 0 24px rgba(0,245,255,.23);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(14px);transition:.25s ease;z-index:80}#backToTop.show{opacity:1;visibility:visible;transform:none}#backToTop:hover{transform:translateY(-3px);box-shadow:0 0 32px rgba(0,245,255,.42)}@media(max-width:600px){.phase:hover{transform:none}.chart{min-height:430px}#backToTop{right:12px;bottom:14px;width:44px;height:44px}}@media(prefers-reduced-motion:reduce){.logo-wrap,.logo-wrap::before,.logo-wrap::after{animation:none!important}.phase,.phase::before,.chart iframe,#backToTop{transition:none!important}}#holderStatus a{text-decoration:none;color:#a9c5ca}#holderStatus a:hover{color:var(--cyan)}#mHolders{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
-<nav class="navbar">
- <div class="container nav-inner">
-  <a class="brand" href="#home"><img src="logo.png" alt="NETRA AI logo"><span>NETRA AI</span></a>
-  <button class="menu" id="menu">☰</button>
-  <div class="nav-links" id="nav">
-   <a href="#market">Market</a><a href="#about">About</a><a href="#dashboard">Dashboard</a><a href="#roadmap">Roadmap</a><a href="#news">News</a><a href="#faq">FAQ</a><a href="whitepaper.html">Whitepaper</a>
-  </div>
- </div>
-</nav>
-
-<header class="hero" id="home">
- <div class="container"><div class="hero-card">
-  <div class="logo-wrap"><img src="logo.png" alt="NETRA AI"></div>
-  <div class="hero-kicker">Artificial Intelligence • BNB Smart Chain • Community Powered</div>
-  <h1>NETRA AI</h1>
-  <div style="margin:8px 0 2px;font-size:clamp(18px,3vw,27px);font-weight:900;color:#ffffff">
-    AI Meme Token on <span style="color:var(--yellow);text-shadow:0 0 12px rgba(240,185,11,.38)">BNB Chain</span>
-  </div>
-  <div class="status"><span class="dot"></span>AI SYSTEM ONLINE</div>
-  <p class="hero-text">NETRA AI is a community-driven AI meme token built on BNB Smart Chain, combining blockchain innovation, artificial intelligence and a growing global community.</p>
-  <div class="actions">
-   <a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener">🚀 Buy NETRA</a>
-   <a class="btn" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener">📈 Live Chart</a>
-   <a class="btn" href="https://t.me/NetraAIofficial" target="_blank" rel="noopener">💬 Telegram</a>
-   <a class="btn" href="https://x.com/NETRAAI_BSC" target="_blank" rel="noopener">𝕏 Follow</a>
-   <a class="btn" href="whitepaper.html">📖 Whitepaper</a>
-  </div>
-  <div class="contract"><div><small>OFFICIAL CONTRACT</small><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div><button class="copy" id="copy">Copy</button></div>
- </div></div>
-</header>
-
-<div class="ticker"><div class="container ticker-grid">
- <div class="tick"><span>BTC</span><b id="btcP">Loading…</b><em id="btcC"></em></div>
- <div class="tick"><span>ETH</span><b id="ethP">Loading…</b><em id="ethC"></em></div>
- <div class="tick"><span>BNB</span><b id="bnbP">Loading…</b><em id="bnbC"></em></div>
- <div class="tick"><span>NETRA</span><b id="netraP">Loading…</b><em id="netraC"></em></div>
-</div></div>
-
+<nav class="navbar"><div class="container nav-inner"><a class="brand" href="#home"><img src="logo.png" alt="NETRA AI logo"><span>NETRA AI</span></a><button class="menu" id="menu">☰</button><div class="nav-links" id="nav"><a href="#market">Market</a><a href="#about">About</a><a href="#dashboard">Dashboard</a><a href="#roadmap">Roadmap</a><a href="#news">News</a><a href="#faq">FAQ</a><a href="whitepaper.html">Whitepaper</a></div></div></nav>
+<header class="hero" id="home"><div class="container"><div class="hero-card"><div class="logo-wrap"><img src="logo.png" alt="NETRA AI"></div><div class="hero-kicker">Artificial Intelligence • BNB Smart Chain • Community Powered</div><h1>NETRA AI</h1><div style="margin:8px 0 2px;font-size:clamp(18px,3vw,27px);font-weight:900;color:#ffffff">AI Meme Token on <span style="color:var(--yellow);text-shadow:0 0 12px rgba(240,185,11,.38)">BNB Chain</span></div><div class="status"><span class="dot"></span>AI SYSTEM ONLINE</div><p class="hero-text">NETRA AI is a community-driven AI meme token built on BNB Smart Chain, combining blockchain innovation, artificial intelligence and a growing global community.</p><div class="actions"><a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener">🚀 Buy NETRA</a><a class="btn" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener">📈 Live Chart</a><a class="btn" href="https://t.me/NetraAIofficial" target="_blank" rel="noopener">💬 Telegram</a><a class="btn" href="https://x.com/NETRAAI_BSC" target="_blank" rel="noopener">𝕏 Follow</a><a class="btn" href="whitepaper.html">📖 Whitepaper</a></div><div class="contract"><div><small>OFFICIAL CONTRACT</small><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div><button class="copy" id="copy">Copy</button></div></div></div></header>
+<div class="ticker"><div class="container ticker-grid"><div class="tick"><span>BTC</span><b id="btcP">Loading…</b><em id="btcC"></em></div><div class="tick"><span>ETH</span><b id="ethP">Loading…</b><em id="ethC"></em></div><div class="tick"><span>BNB</span><b id="bnbP">Loading…</b><em id="bnbC"></em></div><div class="tick"><span>NETRA</span><b id="netraP">Loading…</b><em id="netraC"></em></div></div></div>
 <main>
-<section id="market"><div class="container">
- <div class="head"><div><span class="kicker">Live data</span><h2>NETRA market dashboard</h2></div><p>Public market values are loaded from DEX Screener. Values may be unavailable during provider outages.</p></div>
- <div class="grid">
-  <div class="card metric"><span>Price</span><b id="mPrice">—</b><small id="mChange">24h change —</small></div>
-  <div class="card metric counter-card"><span>Liquidity</span><b class="counter-value" id="mLiq" data-value="0">—</b><small>Pool liquidity</small></div>
-  <div class="card metric counter-card"><span>Market Cap</span><b class="counter-value" id="mCap" data-value="0">—</b><small>Live market valuation</small></div>
-  <div class="card metric counter-card"><span>Holders</span><b class="counter-value" id="mHolders" data-value="0">Loading…</b><small id="holderStatus"><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Auto-updating from BscScan ↗</a></small></div>
-  <div class="card metric"><span>24h volume</span><b id="mVol">—</b><small>Trading volume</small></div>
-  <div class="card metric"><span>24h transactions</span><b id="mTx">—</b><small>Buys + sells</small></div>
-  <div class="card metric"><span>FDV</span><b id="mFdv">—</b><small>Fully diluted valuation</small></div>
-  <div class="card metric"><span>Pair</span><b style="font-size:22px">NETRA / WBNB</b><small>PancakeSwap V2</small></div>
- </div>
- <div class="chart" id="chartBox">
-  <div class="chart-badge">LIVE DEX DATA</div>
-  <iframe id="dexChart" title="NETRA DEX Screener chart" src="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A?embed=1&theme=dark&trades=0&info=0" loading="lazy"></iframe>
- </div>
-</div></section>
-
-<section class="alt" id="about"><div class="container about">
- <div><span class="kicker">The project</span><h2>Built publicly, milestone by milestone</h2><p>NETRA AI focuses on transparent development, public documentation and an active community. The project does not promise financial returns or guaranteed listings.</p></div>
- <div class="features">
-  <div class="card feature"><span class="kicker">01</span><h3>Transparent contract</h3><p>Public BEP-20 contract and transaction history on BscScan.</p></div>
-  <div class="card feature"><span class="kicker">02</span><h3>Open market data</h3><p>Live pair data through DEX Screener.</p></div>
-  <div class="card feature"><span class="kicker">03</span><h3>Official channels</h3><p>Website, X and Telegram are linked from one verified page.</p></div>
-  <div class="card feature"><span class="kicker">04</span><h3>Long-term execution</h3><p>Roadmap targets are goals rather than guarantees.</p></div>
- </div>
-</div></section>
-
-<section id="dashboard"><div class="container">
- <div class="head"><div><span class="kicker">AI dashboard</span><h2>System transparency</h2></div><p>This dashboard reports public website and market connections. It is not a smart-contract security audit.</p></div>
- <div class="ai-grid">
-  <div class="card">
-   <div class="system-row"><span>Website status</span><b>ONLINE</b></div>
-   <div class="system-row"><span>BNB Chain connection</span><b>ACTIVE</b></div>
-   <div class="system-row"><span>DEX market feed</span><b id="dexStatus">CONNECTING</b></div>
-   <div class="system-row"><span>Official contract published</span><b>YES</b></div>
-   <div class="system-row"><span>Whitepaper available</span><b>YES</b></div>
-  </div>
-  <div class="card score-card">
-   <div class="score-ring"><div><b>5/5</b><span>public links online</span></div></div>
-   <p>Website · Whitepaper · BscScan · DEX Screener · Community</p>
-  </div>
- </div>
-</div></section>
-
-<section id="roadmap"><div class="container">
- <div class="head"><div><span class="kicker">Execution plan</span><h2>Roadmap</h2></div><p>Vuốt ngang trên thiết bị di động.</p></div>
- <div class="roadmap">
-  <article class="card phase done"><div class="phase-top"><span>PHASE 01</span><b class="badge">COMPLETED</b></div><h3>Foundation & Launch</h3><ul><li>Smart Contract (BEP-20)</li><li>Whitepaper</li><li>Website Launch</li><li>Telegram</li><li>Twitter / X</li><li>PancakeSwap Listing</li><li>DexScreener Listing</li></ul></article>
-  <article class="card phase active"><div class="phase-top"><span>PHASE 02</span><b class="badge">IN PROGRESS</b></div><h3>Trust & Visibility</h3><ul><li>CoinMarketCap Listing</li><li>CoinGecko Listing</li><li>Trust Wallet Logo</li><li>Token Logo on Major Wallets</li><li>10,000+ Holders</li><li>Liquidity Target: 100–200 BNB</li></ul></article>
-  <article class="card phase"><div class="phase-top"><span>PHASE 03</span><b class="badge">PLANNED</b></div><h3>Market Expansion</h3><ul><li>Strategic Partnerships</li><li>CEX Listing</li><li>Market Cap Target: $10 Million</li><li>AI + RWA Development</li></ul></article>
-  <article class="card phase"><div class="phase-top"><span>PHASE 04</span><b class="badge">PLANNED</b></div><h3>Real World Expansion</h3><ul><li>Major Exchange Listings</li><li>AI Technologies Applied to Real-World Use Cases</li><li>Global Community Growth</li><li>Ecosystem Expansion</li></ul></article>
-  <article class="card phase"><div class="phase-top"><span>PHASE 05</span><b class="badge">LONG TERM</b></div><h3>Long-Term Growth</h3><ul><li>Continuous AI Development</li><li>Ecosystem Optimization</li><li>Community Governance</li><li>Sustainable Liquidity Growth</li><li>Global Brand Expansion</li><li>Long-term Ecosystem Maintenance</li></ul></article>
- </div>
-</div></section>
-
-<section class="alt" id="news"><div class="container">
- <div class="head"><div><span class="kicker">News center</span><h2>Project and crypto updates</h2></div><p>Project updates stay on this website. External headlines are pulled automatically and always link to their original publishers.</p></div>
- <div class="news-tabs"><button class="tab active" data-tab="project">NETRA updates</button><button class="tab" data-tab="crypto">Crypto market</button></div>
- <div class="grid panel active" id="project">
-  <article class="card news-card"><div class="news-meta"><span>Development</span><time>02 Aug 2026</time></div><h3>Website upgraded with live data and newsroom</h3><p>NETRA AI introduced a redesigned website with market statistics, project updates, SEO and mobile-first presentation.</p><span class="read">Official update</span></article>
-  <article class="card news-card"><div class="news-meta"><span>Listing progress</span><time>01 Aug 2026</time></div><h3>CoinMarketCap application submitted</h3><p>The project completed and submitted its initial cryptoasset listing request for review.</p><span class="read">Official update</span></article>
-  <article class="card news-card"><div class="news-meta"><span>Transparency</span><time>02 Aug 2026</time></div><h3>CoinGecko improvement phase begins</h3><p>The project is strengthening liquidity quality, activity, documentation and community signals before a future re-application.</p><span class="read">Official update</span></article>
- </div>
- <div class="grid panel" id="crypto"><article class="card news-card"><div class="news-meta"><span>Automatic feed</span><time>Live</time></div><h3 id="feedStatus">Loading current crypto headlines…</h3><p>Headlines are fetched in the browser. If the public RSS proxy is temporarily unavailable, use the source buttons below.</p><span class="read"><a href="https://www.coindesk.com/" target="_blank">CoinDesk ↗</a> · <a href="https://cointelegraph.com/" target="_blank">Cointelegraph ↗</a></span></article></div>
- <p class="news-note">The site displays only headlines, source, date and a brief excerpt. Full articles remain on the original publisher’s website.</p>
-</div></section>
-
-<section id="tokenomics"><div class="container">
- <div class="head"><div><span class="kicker">Token information</span><h2>Supply & on-chain facts</h2></div><p>No invented allocation chart is shown. Current holder distribution should always be verified directly on BscScan.</p></div>
- <div class="supply-layout">
-  <div class="card supply-card"><div class="supply-ring"><div><b>1B</b><span>Total NETRA supply</span></div></div></div>
-  <div class="card fact-list">
-   <div class="fact"><span>Name</span><b>NETRA AI</b></div>
-   <div class="fact"><span>Symbol</span><b>NETRA</b></div>
-   <div class="fact"><span>Network</span><b>BNB Smart Chain</b></div>
-   <div class="fact"><span>Standard</span><b>BEP-20</b></div>
-   <div class="fact"><span>Decimals</span><b>18</b></div>
-   <div class="fact"><span>Contract</span><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div>
-  </div>
- </div>
-</div></section>
-
-<section class="alt" id="infrastructure"><div class="container">
- <div class="head"><div><span class="kicker">Infrastructure</span><h2>Public services used by NETRA AI</h2></div><p>These are infrastructure and tracking services, not claims of commercial partnership.</p></div>
- <div class="infrastructure">
-  <a class="card infra" href="https://www.bnbchain.org/" target="_blank" rel="noopener"><b>BNB Chain</b><span>Blockchain network</span></a>
-  <a class="card infra" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>PancakeSwap</b><span>DEX trading</span></a>
-  <a class="card infra" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener"><b>DEX Screener</b><span>Market tracking</span></a>
-  <a class="card infra" href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>BscScan</b><span>On-chain explorer</span></a>
- </div>
-</div></section>
-
-<section id="faq"><div class="container">
- <div class="head"><div><span class="kicker">FAQ</span><h2>Common questions</h2></div><p>Quick answers for new visitors.</p></div>
- <div class="faq">
-  <details><summary>What is NETRA AI?</summary><p>NETRA AI is a community-driven AI-themed BEP-20 token on BNB Smart Chain.</p></details>
-  <details><summary>Where can I buy NETRA?</summary><p>NETRA trades through PancakeSwap V2. Always use the official contract shown on this website.</p></details>
-  <details><summary>What is the total supply?</summary><p>The total supply is 1,000,000,000 NETRA with 18 decimals.</p></details>
-  <details><summary>How can I verify the contract?</summary><p>Open the official BscScan link and confirm the full contract address.</p></details>
-  <details><summary>Is NETRA guaranteed to increase in price?</summary><p>No. Cryptoassets are volatile and no return, listing, liquidity target or roadmap milestone is guaranteed.</p></details>
-  <details><summary>Does the project control every large holder?</summary><p>No. Independent wallets may buy, hold, transfer or sell tokens without project control. Check holder distribution on BscScan.</p></details>
- </div>
-</div></section>
-
-<section class="alt" id="community"><div class="container community">
- <div><span class="kicker">Official channels</span><h2>Join NETRA AI</h2><p style="color:var(--muted);line-height:1.8">Only trust links published on this website. Administrators will never request your seed phrase or private key.</p></div>
- <div class="community-links"><a href="https://t.me/NetraAIofficial" target="_blank">Telegram ↗</a><a href="https://x.com/NETRAAI_BSC" target="_blank">X / Twitter ↗</a><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank">BscScan ↗</a><a href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank">DEX Screener ↗</a></div>
-</div></section>
-
+<section id="market"><div class="container"><div class="head"><div><span class="kicker">Live data</span><h2>NETRA market dashboard</h2></div><p>Public market values are loaded from DEX Screener. Values may be unavailable during provider outages.</p></div><div class="grid"><div class="card metric"><span>Price</span><b id="mPrice">—</b><small id="mChange">24h change —</small></div><div class="card metric counter-card"><span>Liquidity</span><b class="counter-value" id="mLiq" data-value="0">—</b><small>Pool liquidity</small></div><div class="card metric counter-card"><span>Market Cap</span><b class="counter-value" id="mCap" data-value="0">—</b><small>Live market valuation</small></div><div class="card metric counter-card"><span>Holders</span><b class="counter-value" id="mHolders" data-value="0">Loading…</b><small id="holderStatus"><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Auto-updating from BscScan ↗</a></small></div><div class="card metric"><span>24h volume</span><b id="mVol">—</b><small>Trading volume</small></div><div class="card metric"><span>24h transactions</span><b id="mTx">—</b><small>Buys + sells</small></div><div class="card metric"><span>FDV</span><b id="mFdv">—</b><small>Fully diluted valuation</small></div><div class="card metric"><span>Pair</span><b style="font-size:22px">NETRA / WBNB</b><small>PancakeSwap V2</small></div></div><div class="chart" id="chartBox"><div class="chart-badge">LIVE DEX DATA</div><iframe id="dexChart" title="NETRA DEX Screener chart" src="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A?embed=1&theme=dark&trades=0&info=0" loading="lazy"></iframe></div></div></section>
+<section class="alt" id="about"><div class="container about"><div><span class="kicker">The project</span><h2>Built publicly, milestone by milestone</h2><p>NETRA AI focuses on transparent development, public documentation and an active community. The project does not promise financial returns or guaranteed listings.</p></div><div class="features"><div class="card feature"><span class="kicker">01</span><h3>Transparent contract</h3><p>Public BEP-20 contract and transaction history on BscScan.</p></div><div class="card feature"><span class="kicker">02</span><h3>Open market data</h3><p>Live pair data through DEX Screener.</p></div><div class="card feature"><span class="kicker">03</span><h3>Official channels</h3><p>Website, X and Telegram are linked from one verified page.</p></div><div class="card feature"><span class="kicker">04</span><h3>Long-term execution</h3><p>Roadmap targets are goals rather than guarantees.</p></div></div></div></section>
+<section id="dashboard"><div class="container"><div class="head"><div><span class="kicker">AI dashboard</span><h2>System transparency</h2></div><p>This dashboard reports public website and market connections. It is not a smart-contract security audit.</p></div><div class="ai-grid"><div class="card"><div class="system-row"><span>Website status</span><b>ONLINE</b></div><div class="system-row"><span>BNB Chain connection</span><b>ACTIVE</b></div><div class="system-row"><span>DEX market feed</span><b id="dexStatus">CONNECTING</b></div><div class="system-row"><span>Official contract published</span><b>YES</b></div><div class="system-row"><span>Whitepaper available</span><b>YES</b></div></div><div class="card score-card"><div class="score-ring"><div><b>5/5</b><span>public links online</span></div></div><p>Website · Whitepaper · BscScan · DEX Screener · Community</p></div></div></div></section>
+<section id="roadmap"><div class="container"><div class="head"><div><span class="kicker">Execution plan</span><h2>Roadmap</h2></div><p>Vuốt ngang trên thiết bị di động.</p></div><div class="roadmap"><article class="card phase done"><div class="phase-top"><span>PHASE 01</span><b class="badge">COMPLETED</b></div><h3>Foundation & Launch</h3><ul><li>Smart Contract (BEP-20)</li><li>Whitepaper</li><li>Website Launch</li><li>Telegram</li><li>Twitter / X</li><li>PancakeSwap Listing</li><li>DexScreener Listing</li></ul></article><article class="card phase active"><div class="phase-top"><span>PHASE 02</span><b class="badge">IN PROGRESS</b></div><h3>Trust & Visibility</h3><ul><li>CoinMarketCap Listing</li><li>CoinGecko Listing</li><li>Trust Wallet Logo</li><li>Token Logo on Major Wallets</li><li>10,000+ Holders</li><li>Liquidity Target: 100–200 BNB</li></ul></article><article class="card phase"><div class="phase-top"><span>PHASE 03</span><b class="badge">PLANNED</b></div><h3>Market Expansion</h3><ul><li>Strategic Partnerships</li><li>CEX Listing</li><li>Market Cap Target: $10 Million</li><li>AI + RWA Development</li></ul></article><article class="card phase"><div class="phase-top"><span>PHASE 04</span><b class="badge">PLANNED</b></div><h3>Real World Expansion</h3><ul><li>Major Exchange Listings</li><li>AI Technologies Applied to Real-World Use Cases</li><li>Global Community Growth</li><li>Ecosystem Expansion</li></ul></article><article class="card phase"><div class="phase-top"><span>PHASE 05</span><b class="badge">LONG TERM</b></div><h3>Long-Term Growth</h3><ul><li>Continuous AI Development</li><li>Ecosystem Optimization</li><li>Community Governance</li><li>Sustainable Liquidity Growth</li><li>Global Brand Expansion</li><li>Long-term Ecosystem Maintenance</li></ul></article></div></div></section>
+<section class="alt" id="news"><div class="container"><div class="head"><div><span class="kicker">News center</span><h2>Project and crypto updates</h2></div><p>Project updates stay on this website. External headlines are pulled automatically and always link to their original publishers.</p></div><div class="news-tabs"><button class="tab active" data-tab="project">NETRA updates</button><button class="tab" data-tab="crypto">Crypto market</button></div><div class="grid panel active" id="project"><article class="card news-card"><div class="news-meta"><span>Development</span><time>02 Aug 2026</time></div><h3>Website upgraded with live data and newsroom</h3><p>NETRA AI introduced a redesigned website with market statistics, project updates, SEO and mobile-first presentation.</p><span class="read">Official update</span></article><article class="card news-card"><div class="news-meta"><span>Listing progress</span><time>01 Aug 2026</time></div><h3>CoinMarketCap application submitted</h3><p>The project completed and submitted its initial cryptoasset listing request for review.</p><span class="read">Official update</span></article><article class="card news-card"><div class="news-meta"><span>Transparency</span><time>02 Aug 2026</time></div><h3>CoinGecko improvement phase begins</h3><p>The project is strengthening liquidity quality, activity, documentation and community signals before a future re-application.</p><span class="read">Official update</span></article></div>
+<div class="grid panel" id="crypto"><article class="card news-card"><div class="news-meta"><span>Automatic feed</span><time>Live</time></div><h3 id="feedStatus">Loading current crypto headlines…</h3><span class="read"><a href="https://www.coindesk.com/" target="_blank" rel="noopener noreferrer">CoinDesk ↗</a> · <a href="https://cointelegraph.com/" target="_blank" rel="noopener noreferrer">Cointelegraph ↗</a></span></article></div>
+<p class="news-note">Crypto Market displays external headlines, publication dates and source links only. NETRA AI does not reproduce article content or images. Select a headline to read the original article on the publisher’s website.</p></div></section>
+<section id="tokenomics"><div class="container"><div class="head"><div><span class="kicker">Token information</span><h2>Supply & on-chain facts</h2></div><p>No invented allocation chart is shown. Current holder distribution should always be verified directly on BscScan.</p></div><div class="supply-layout"><div class="card supply-card"><div class="supply-ring"><div><b>1B</b><span>Total NETRA supply</span></div></div></div><div class="card fact-list"><div class="fact"><span>Name</span><b>NETRA AI</b></div><div class="fact"><span>Symbol</span><b>NETRA</b></div><div class="fact"><span>Network</span><b>BNB Smart Chain</b></div><div class="fact"><span>Standard</span><b>BEP-20</b></div><div class="fact"><span>Decimals</span><b>18</b></div><div class="fact"><span>Contract</span><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div></div></div></div></section>
+<section class="alt" id="infrastructure"><div class="container"><div class="head"><div><span class="kicker">Infrastructure</span><h2>Public services used by NETRA AI</h2></div><p>These are infrastructure and tracking services, not claims of commercial partnership.</p></div><div class="infrastructure"><a class="card infra" href="https://www.bnbchain.org/" target="_blank" rel="noopener"><b>BNB Chain</b><span>Blockchain network</span></a><a class="card infra" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>PancakeSwap</b><span>DEX trading</span></a><a class="card infra" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener"><b>DEX Screener</b><span>Market tracking</span></a><a class="card infra" href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>BscScan</b><span>On-chain explorer</span></a></div></div></section>
+<section id="faq"><div class="container"><div class="head"><div><span class="kicker">FAQ</span><h2>Common questions</h2></div><p>Quick answers for new visitors.</p></div><div class="faq"><details><summary>What is NETRA AI?</summary><p>NETRA AI is a community-driven AI-themed BEP-20 token on BNB Smart Chain.</p></details><details><summary>Where can I buy NETRA?</summary><p>NETRA trades through PancakeSwap V2. Always use the official contract shown on this website.</p></details><details><summary>What is the total supply?</summary><p>The total supply is 1,000,000,000 NETRA with 18 decimals.</p></details><details><summary>How can I verify the contract?</summary><p>Open the official BscScan link and confirm the full contract address.</p></details><details><summary>Is NETRA guaranteed to increase in price?</summary><p>No. Cryptoassets are volatile and no return, listing, liquidity target or roadmap milestone is guaranteed.</p></details><details><summary>Does the project control every large holder?</summary><p>No. Independent wallets may buy, hold, transfer or sell tokens without project control. Check holder distribution on BscScan.</p></details></div></div></section>
+<section class="alt" id="community"><div class="container community"><div><span class="kicker">Official channels</span><h2>Join NETRA AI</h2><p style="color:var(--muted);line-height:1.8">Only trust links published on this website. Administrators will never request your seed phrase or private key.</p></div><div class="community-links"><a href="https://t.me/NetraAIofficial" target="_blank">Telegram ↗</a><a href="https://x.com/NETRAAI_BSC" target="_blank">X / Twitter ↗</a><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank">BscScan ↗</a><a href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank">DEX Screener ↗</a></div></div></section>
 <section><div class="container"><div class="card disclaimer"><h3>⚠️ Risk disclosure</h3><p>NETRA AI is a community-driven cryptoasset. Crypto markets are highly volatile and participants may lose some or all of their funds. Liquidity can change quickly and large independent holders may create sell-pressure risk. This website is informational only and does not provide financial, legal or tax advice. Listings, prices, holder targets, liquidity targets and roadmap milestones are not guaranteed.</p></div></div></section>
 </main>
-
-<footer style="border-top:1px solid rgba(255,255,255,.08);padding:28px 0;text-align:center">
- <div style="font-size:18px;font-weight:700;color:#ffffff">© 2026 NETRA AI. All Rights Reserved.</div>
- <div style="margin-top:8px;font-size:14px;color:#d6d6d6">Powered by Community • Built on BNB Smart Chain</div>
-</footer>
-<button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
-<div class="toast" id="toast">Contract copied</div>
-
+<footer style="border-top:1px solid rgba(255,255,255,.08);padding:28px 0;text-align:center"><div style="font-size:18px;font-weight:700;color:#ffffff">© 2026 NETRA AI. All Rights Reserved.</div><div style="margin-top:8px;font-size:14px;color:#d6d6d6">Powered by Community • Built on BNB Smart Chain</div></footer><button id="backToTop" aria-label="Back to top" title="Back to top">↑</button><div class="toast" id="toast">Contract copied</div>
 <script>
-const CONTRACT="0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7";
-const PAIR_API="https://api.dexscreener.com/latest/dex/pairs/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A";
-const CG_API="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin&vs_currencies=usd&include_24hr_change=true";
-const $=id=>document.getElementById(id);
-const money=(v,c=false)=>{let n=Number(v);if(!Number.isFinite(n))return"—";if(n>0&&n<.000001)return"$"+n.toExponential(3);return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",notation:c?"compact":"standard",maximumFractionDigits:n<1?8:2}).format(n)};
-const pct=n=>`${Number(n)>=0?"+":""}${Number(n||0).toFixed(2)}%`;
-const cls=n=>Number(n)>=0?"positive":"negative";
-const compactUSD=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:2}).format(Number(n)||0);
-function animateNumber(el,end,{duration=1000,formatter=v=>Math.round(v).toLocaleString("en-US")}={}){
-  if(!el||!Number.isFinite(Number(end)))return;
-  const start=Number(el.dataset.current||0),target=Number(end),started=performance.now();
-  function frame(now){
-    const t=Math.min((now-started)/duration,1);
-    const eased=1-Math.pow(1-t,3);
-    const value=start+(target-start)*eased;
-    el.textContent=formatter(value);
-    if(t<1)requestAnimationFrame(frame);
-    else el.dataset.current=String(target);
-  }
-  requestAnimationFrame(frame);
-}
-$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(CONTRACT);$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1600)}catch(e){alert(CONTRACT)}};
-$("menu").onclick=()=>$("nav").classList.toggle("open");
-document.querySelectorAll("#nav a").forEach(a=>a.onclick=()=>$("nav").classList.remove("open"));
-async function fetchJSON(url,timeout=10000){
-  const controller=new AbortController();
-  const timer=setTimeout(()=>controller.abort(),timeout);
-  try{
-    const separator=url.includes("?")?"&":"?";
-    const response=await fetch(url+separator+"_="+Date.now(),{
-      cache:"no-store",
-      headers:{"Accept":"application/json"},
-      signal:controller.signal
-    });
-    if(!response.ok)throw new Error("HTTP "+response.status);
-    return await response.json();
-  }finally{
-    clearTimeout(timer);
-  }
-}
-
-async function updateMajorPrices(){
-  try{
-    const cg=await fetchJSON(CG_API);
-    [["btc",cg.bitcoin],["eth",cg.ethereum],["bnb",cg.binancecoin]].forEach(([id,x])=>{
-      if(!x)return;
-      $(id+"P").textContent=money(x.usd);
-      $(id+"C").textContent=pct(x.usd_24h_change);
-      $(id+"C").className=cls(x.usd_24h_change);
-    });
-  }catch(error){
-    console.warn("Major prices unavailable",error);
-  }
-}
-
-async function updateNetraMarket(){
-  try{
-    const data=await fetchJSON(PAIR_API);
-    const p=data.pair||data.pairs?.[0];
-    if(!p)throw new Error("NETRA pair unavailable");
-
-    $("netraP").textContent=money(p.priceUsd);
-    $("netraC").textContent=pct(p.priceChange?.h24);
-    $("netraC").className=cls(p.priceChange?.h24);
-
-    $("mPrice").textContent=money(p.priceUsd);
-    $("mChange").textContent="24h change "+pct(p.priceChange?.h24);
-    $("mChange").className=cls(p.priceChange?.h24);
-
-    animateNumber($("mLiq"),Number(p.liquidity?.usd||0),{
-      duration:700,
-      formatter:compactUSD
-    });
-    animateNumber($("mCap"),Number(p.marketCap||p.fdv||0),{
-      duration:700,
-      formatter:compactUSD
-    });
-
-    $("mVol").textContent=money(p.volume?.h24,true);
-    $("mTx").textContent=(p.txns?.h24?.buys||0)+(p.txns?.h24?.sells||0);
-    $("mFdv").textContent=money(p.fdv,true);
-
-    if($("dexStatus"))$("dexStatus").textContent="ACTIVE";
-  }catch(error){
-    console.warn("NETRA market unavailable",error);
-    if($("dexStatus"))$("dexStatus").textContent="RETRYING";
-  }
-}
-
-function refreshMarket(){
-  updateMajorPrices();
-  updateNetraMarket();
-}
+const CONTRACT="0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7";const PAIR_API="https://api.dexscreener.com/latest/dex/pairs/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A";const CG_API="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin&vs_currencies=usd&include_24hr_change=true";const $=id=>document.getElementById(id);const money=(v,c=false)=>{let n=Number(v);if(!Number.isFinite(n))return"—";if(n>0&&n<.000001)return"$"+n.toExponential(3);return new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",notation:c?"compact":"standard",maximumFractionDigits:n<1?8:2}).format(n)};const pct=n=>`${Number(n)>=0?"+":""}${Number(n||0).toFixed(2)}%`;const cls=n=>Number(n)>=0?"positive":"negative";const compactUSD=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:2}).format(Number(n)||0);
+function animateNumber(el,end,{duration=1000,formatter=v=>Math.round(v).toLocaleString("en-US")}={}){if(!el||!Number.isFinite(Number(end)))return;const start=Number(el.dataset.current||0),target=Number(end),started=performance.now();function frame(now){const t=Math.min((now-started)/duration,1);const eased=1-Math.pow(1-t,3);const value=start+(target-start)*eased;el.textContent=formatter(value);if(t<1)requestAnimationFrame(frame);else el.dataset.current=String(target)}requestAnimationFrame(frame)}
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(CONTRACT);$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1600)}catch(e){alert(CONTRACT)}};$("menu").onclick=()=>$("nav").classList.toggle("open");document.querySelectorAll("#nav a").forEach(a=>a.onclick=()=>$("nav").classList.remove("open"));
+async function fetchJSON(url,timeout=10000){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),timeout);try{const separator=url.includes("?")?"&":"?";const response=await fetch(url+separator+"_="+Date.now(),{cache:"no-store",headers:{"Accept":"application/json"},signal:controller.signal});if(!response.ok)throw new Error("HTTP "+response.status);return await response.json()}finally{clearTimeout(timer)}}
+async function updateMajorPrices(){try{const cg=await fetchJSON(CG_API);[["btc",cg.bitcoin],["eth",cg.ethereum],["bnb",cg.binancecoin]].forEach(([id,x])=>{if(!x)return;$(id+"P").textContent=money(x.usd);$(id+"C").textContent=pct(x.usd_24h_change);$(id+"C").className=cls(x.usd_24h_change)})}catch(error){console.warn("Major prices unavailable",error)}}
+async function updateNetraMarket(){try{const data=await fetchJSON(PAIR_API);const p=data.pair||data.pairs?.[0];if(!p)throw new Error("NETRA pair unavailable");$("netraP").textContent=money(p.priceUsd);$("netraC").textContent=pct(p.priceChange?.h24);$("netraC").className=cls(p.priceChange?.h24);$("mPrice").textContent=money(p.priceUsd);$("mChange").textContent="24h change "+pct(p.priceChange?.h24);$("mChange").className=cls(p.priceChange?.h24);animateNumber($("mLiq"),Number(p.liquidity?.usd||0),{duration:700,formatter:compactUSD});animateNumber($("mCap"),Number(p.marketCap||p.fdv||0),{duration:700,formatter:compactUSD});$("mVol").textContent=money(p.volume?.h24,true);$("mTx").textContent=(p.txns?.h24?.buys||0)+(p.txns?.h24?.sells||0);$("mFdv").textContent=money(p.fdv,true);if($("dexStatus"))$("dexStatus").textContent="ACTIVE"}catch(error){console.warn("NETRA market unavailable",error);if($("dexStatus"))$("dexStatus").textContent="RETRYING"}}
+function refreshMarket(){updateMajorPrices();updateNetraMarket()}
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");$(b.dataset.tab).classList.add("active");if(b.dataset.tab==="crypto")loadNews(true)});
-let newsLoaded=false;
-let lastNewsRefresh=0;
+let newsLoaded=false;let lastNewsRefresh=0;
 async function loadNews(force=false){
  if(!force&&newsLoaded&&Date.now()-lastNewsRefresh<15*60*1000)return;
- newsLoaded=true;
- lastNewsRefresh=Date.now();
+ newsLoaded=true;lastNewsRefresh=Date.now();
  const target=$("crypto");
- const feeds=[["CoinDesk","https://www.coindesk.com/arc/outboundfeeds/rss/"],["Cointelegraph","https://cointelegraph.com/rss"]];
- let items=[];
- for(const [source,url] of feeds){
+ const feeds=[{source:"CoinDesk",feed:"https://www.coindesk.com/arc/outboundfeeds/rss/",homepage:"https://www.coindesk.com/"},{source:"Cointelegraph",feed:"https://cointelegraph.com/rss",homepage:"https://cointelegraph.com/"}];
+ const items=[];
+ for(const feedData of feeds){
   try{
-   const proxy="https://api.allorigins.win/raw?url="+encodeURIComponent(url);
-   const xml=await fetch(proxy).then(r=>r.text());
+   const proxy="https://api.allorigins.win/raw?url="+encodeURIComponent(feedData.feed);
+   const response=await fetch(proxy,{cache:"no-store",headers:{"Accept":"application/rss+xml, application/xml, text/xml"}});
+   if(!response.ok)throw new Error("HTTP "+response.status);
+   const xml=await response.text();
    const doc=new DOMParser().parseFromString(xml,"text/xml");
-   [...doc.querySelectorAll("item")].slice(0,4).forEach(i=>items.push({source,title:i.querySelector("title")?.textContent||"",url:i.querySelector("link")?.textContent||"",date:(i.querySelector("pubDate")?.textContent||"").slice(0,16),excerpt:(i.querySelector("description")?.textContent||"").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim().slice(0,180)}));
-  }catch(e){console.warn(source,e)}
+   if(doc.querySelector("parsererror"))throw new Error("Invalid RSS response");
+   [...doc.querySelectorAll("item")].slice(0,4).forEach(item=>{
+    const title=(item.querySelector("title")?.textContent||"").trim();
+    const articleUrl=(item.querySelector("link")?.textContent||"").trim();
+    const rawDate=(item.querySelector("pubDate")?.textContent||"").trim();
+    if(!title||!articleUrl)return;
+    let formattedDate="Latest";
+    if(rawDate){const parsedDate=new Date(rawDate);if(!Number.isNaN(parsedDate.getTime()))formattedDate=parsedDate.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"})}
+    items.push({source:feedData.source,title,url:articleUrl,date:formattedDate});
+   });
+  }catch(error){console.warn(feedData.source+" feed unavailable",error)}
  }
- if(items.length)target.innerHTML=items.slice(0,6).map(i=>`<a class="card news-card" href="${i.url}" target="_blank" rel="noopener"><div class="news-meta"><span>${i.source}</span><time>${i.date}</time></div><h3>${i.title}</h3><p>${i.excerpt}</p><span class="read">Read original ↗</span></a>`).join("");
- else $("feedStatus").textContent="Live feed temporarily unavailable";
-}
-
-
-const HOLDER_CACHE_KEY="netra_holder_count_v1";
-const HOLDER_CACHE_TIME_KEY="netra_holder_count_time_v1";
-const HOLDER_REFRESH_MS=10*60*1000;
-
-function parseHolderCount(raw){
-  if(!raw)return null;
-  const text=String(raw)
-    .replace(/<script[\s\S]*?<\/script>/gi," ")
-    .replace(/<style[\s\S]*?<\/style>/gi," ")
-    .replace(/<[^>]+>/g," ")
-    .replace(/&nbsp;|&#160;/gi," ")
-    .replace(/\s+/g," ");
-
-  const patterns=[
-    /Holders?\s*[:\-]?\s*([0-9][0-9,]*)/i,
-    /([0-9][0-9,]*)\s+Holders?/i,
-    /Token\s+Holders?[^0-9]{0,80}([0-9][0-9,]*)/i
-  ];
-
-  for(const pattern of patterns){
-    const match=text.match(pattern);
-    if(match){
-      const value=Number(match[1].replace(/,/g,""));
-      if(Number.isInteger(value)&&value>=0&&value<1000000000)return value;
-    }
-  }
-  return null;
-}
-
-function showHolderCount(count,sourceLabel="BscScan"){
-  const el=$("mHolders"),status=$("holderStatus");
-  if(!el)return;
-  el.dataset.value=String(count);
-  animateNumber(el,count,{
-    duration:950,
-    formatter:v=>Math.round(v).toLocaleString("en-US")
+ target.replaceChildren();
+ if(items.length){
+  items.slice(0,6).forEach(item=>{
+   const card=document.createElement("a");card.className="card news-card";card.href=item.url;card.target="_blank";card.rel="noopener noreferrer";
+   const meta=document.createElement("div");meta.className="news-meta";
+   const source=document.createElement("span");source.textContent=item.source;
+   const date=document.createElement("time");date.textContent=item.date;
+   const title=document.createElement("h3");title.textContent=item.title;
+   const read=document.createElement("span");read.className="read";read.textContent="Read original ↗";
+   meta.append(source,date);card.append(meta,title,read);target.appendChild(card);
   });
-  if(status){
-    const time=new Date().toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit"});
-    status.innerHTML=`<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">${sourceLabel} · updated ${time} ↗</a>`;
-  }
-  try{
-    localStorage.setItem(HOLDER_CACHE_KEY,String(count));
-    localStorage.setItem(HOLDER_CACHE_TIME_KEY,String(Date.now()));
-  }catch(e){}
+  return;
+ }
+ const unavailableCard=document.createElement("article");unavailableCard.className="card news-card";
+ const unavailableMeta=document.createElement("div");unavailableMeta.className="news-meta";
+ const automaticFeed=document.createElement("span");automaticFeed.textContent="Automatic feed";
+ const live=document.createElement("time");live.textContent="Live";
+ const unavailableTitle=document.createElement("h3");unavailableTitle.id="feedStatus";unavailableTitle.textContent="Live feed temporarily unavailable";
+ const sourceLinks=document.createElement("span");sourceLinks.className="read";
+ const coinDeskLink=document.createElement("a");coinDeskLink.href="https://www.coindesk.com/";coinDeskLink.target="_blank";coinDeskLink.rel="noopener noreferrer";coinDeskLink.textContent="CoinDesk ↗";
+ const separator=document.createTextNode(" · ");
+ const cointelegraphLink=document.createElement("a");cointelegraphLink.href="https://cointelegraph.com/";cointelegraphLink.target="_blank";cointelegraphLink.rel="noopener noreferrer";cointelegraphLink.textContent="Cointelegraph ↗";
+ unavailableMeta.append(automaticFeed,live);sourceLinks.append(coinDeskLink,separator,cointelegraphLink);unavailableCard.append(unavailableMeta,unavailableTitle,sourceLinks);target.appendChild(unavailableCard);
 }
-
-async function fetchHolderText(url,timeout=9000){
-  const controller=new AbortController();
-  const timer=setTimeout(()=>controller.abort(),timeout);
-  try{
-    const response=await fetch(url,{cache:"no-store",signal:controller.signal});
-    if(!response.ok)throw new Error("HTTP "+response.status);
-    return await response.text();
-  }finally{
-    clearTimeout(timer);
-  }
-}
-
-async function loadHolderCount(){
-  const status=$("holderStatus");
-  let cached=null,cachedAt=0;
-  try{
-    cached=Number(localStorage.getItem(HOLDER_CACHE_KEY));
-    cachedAt=Number(localStorage.getItem(HOLDER_CACHE_TIME_KEY));
-  }catch(e){}
-
-  if(Number.isInteger(cached)&&cached>=0){
-    showHolderCount(cached,"Cached holder count");
-  }
-
-  const bscUrl=`https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7`;
-  const sources=[
-    {
-      label:"BscScan",
-      url:"https://api.allorigins.win/raw?url="+encodeURIComponent(bscUrl)
-    },
-    {
-      label:"BscScan",
-      url:"https://r.jina.ai/https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7"
-    }
-  ];
-
-  for(const source of sources){
-    try{
-      const raw=await fetchHolderText(source.url);
-      const count=parseHolderCount(raw);
-      if(count!==null){
-        showHolderCount(count,source.label);
-        return count;
-      }
-    }catch(error){
-      console.warn("Holder source unavailable:",source.url,error);
-    }
-  }
-
-  if(!Number.isInteger(cached)||cached<0){
-    const el=$("mHolders");
-    if(el)el.textContent="View";
-    if(status)status.innerHTML='<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Live source temporarily unavailable · View on BscScan ↗</a>';
-  }else if(status){
-    const ageMinutes=Math.max(1,Math.round((Date.now()-cachedAt)/60000));
-    status.innerHTML=`<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Cached ${ageMinutes} min ago · View BscScan ↗</a>`;
-  }
-  return null;
-}
-
-loadHolderCount();
-setInterval(loadHolderCount,HOLDER_REFRESH_MS);
-
-const chartFrame=$("dexChart"),chartBox=$("chartBox");
-if(chartFrame&&chartBox){
-  chartFrame.addEventListener("load",()=>chartBox.classList.add("loaded"),{once:true});
-  setTimeout(()=>chartBox.classList.add("loaded"),7000);
-}
-const backToTop=$("backToTop");
-if(backToTop){
-  addEventListener("scroll",()=>backToTop.classList.toggle("show",scrollY>650),{passive:true});
-  backToTop.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
-}
-
-const canvas=$("matrix"),ctx=canvas.getContext("2d");let drops=[],fs=16;function resize(){canvas.width=innerWidth;canvas.height=innerHeight;drops=Array(Math.ceil(innerWidth/fs)).fill(1)}function draw(){ctx.fillStyle="rgba(0,0,0,.065)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff66";ctx.font=fs+"px monospace";drops.forEach((y,i)=>{ctx.fillText(Math.random()>.5?"1":"0",i*fs,y*fs);drops[i]=(y*fs>canvas.height&&Math.random()>.975)?0:y+1})}resize();
-setInterval(draw,48);
-addEventListener("resize",resize);
-
-refreshMarket();
-setInterval(updateNetraMarket,30000);
-setInterval(updateMajorPrices,60000);
-
-document.addEventListener("visibilitychange",()=>{
-  if(!document.hidden){
-    refreshMarket();
-    loadHolderCount();
-  }
-});
-
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll("section .card,section .head,section .about>div,section .community>div").forEach(el=>{el.classList.add("reveal");obs.observe(el)});
+const HOLDER_CACHE_KEY="netra_holder_count_v1";const HOLDER_CACHE_TIME_KEY="netra_holder_count_time_v1";const HOLDER_REFRESH_MS=10*60*1000;
+function parseHolderCount(raw){if(!raw)return null;const text=String(raw).replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ").replace(/&nbsp;|&#160;/gi," ").replace(/\s+/g," ");const patterns=[/Holders?\s*[:\-]?\s*([0-9][0-9,]*)/i,/([0-9][0-9,]*)\s+Holders?/i,/Token\s+Holders?[^0-9]{0,80}([0-9][0-9,]*)/i];for(const pattern of patterns){const match=text.match(pattern);if(match){const value=Number(match[1].replace(/,/g,""));if(Number.isInteger(value)&&value>=0&&value<1000000000)return value}}return null}
+function showHolderCount(count,sourceLabel="BscScan"){const el=$("mHolders"),status=$("holderStatus");if(!el)return;el.dataset.value=String(count);animateNumber(el,count,{duration:950,formatter:v=>Math.round(v).toLocaleString("en-US")});if(status){const time=new Date().toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit"});status.innerHTML=`<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">${sourceLabel} · updated ${time} ↗</a>`}try{localStorage.setItem(HOLDER_CACHE_KEY,String(count));localStorage.setItem(HOLDER_CACHE_TIME_KEY,String(Date.now()))}catch(e){}}
+async function fetchHolderText(url,timeout=9000){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),timeout);try{const response=await fetch(url,{cache:"no-store",signal:controller.signal});if(!response.ok)throw new Error("HTTP "+response.status);return await response.text()}finally{clearTimeout(timer)}}
+async function loadHolderCount(){const status=$("holderStatus");let cached=null,cachedAt=0;try{cached=Number(localStorage.getItem(HOLDER_CACHE_KEY));cachedAt=Number(localStorage.getItem(HOLDER_CACHE_TIME_KEY))}catch(e){}if(Number.isInteger(cached)&&cached>=0)showHolderCount(cached,"Cached holder count");const bscUrl=`https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7`;const sources=[{label:"BscScan",url:"https://api.allorigins.win/raw?url="+encodeURIComponent(bscUrl)},{label:"BscScan",url:"https://r.jina.ai/https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7"}];for(const source of sources){try{const raw=await fetchHolderText(source.url);const count=parseHolderCount(raw);if(count!==null){showHolderCount(count,source.label);return count}}catch(error){console.warn("Holder source unavailable:",source.url,error)}}if(!Number.isInteger(cached)||cached<0){const el=$("mHolders");if(el)el.textContent="View";if(status)status.innerHTML='<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Live source temporarily unavailable · View on BscScan ↗</a>'}else if(status){const ageMinutes=Math.max(1,Math.round((Date.now()-cachedAt)/60000));status.innerHTML=`<a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Cached ${ageMinutes} min ago · View BscScan ↗</a>`}return null}
+loadHolderCount();setInterval(loadHolderCount,HOLDER_REFRESH_MS);const chartFrame=$("dexChart"),chartBox=$("chartBox");if(chartFrame&&chartBox){chartFrame.addEventListener("load",()=>chartBox.classList.add("loaded"),{once:true});setTimeout(()=>chartBox.classList.add("loaded"),7000)}const backToTop=$("backToTop");if(backToTop){addEventListener("scroll",()=>backToTop.classList.toggle("show",scrollY>650),{passive:true});backToTop.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}))}const canvas=$("matrix"),ctx=canvas.getContext("2d");let drops=[],fs=16;function resize(){canvas.width=innerWidth;canvas.height=innerHeight;drops=Array(Math.ceil(innerWidth/fs)).fill(1)}function draw(){ctx.fillStyle="rgba(0,0,0,.065)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff66";ctx.font=fs+"px monospace";drops.forEach((y,i)=>{ctx.fillText(Math.random()>.5?"1":"0",i*fs,y*fs);drops[i]=(y*fs>canvas.height&&Math.random()>.975)?0:y+1})}resize();setInterval(draw,48);addEventListener("resize",resize);refreshMarket();setInterval(updateNetraMarket,30000);setInterval(updateMajorPrices,60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden){refreshMarket();loadHolderCount()}});const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll("section .card,section .head,section .about>div,section .community>div").forEach(el=>{el.classList.add("reveal");obs.observe(el)});
 </script>
 </body>
 </html>
