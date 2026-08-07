@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://dexscreener.com">
 <link rel="preconnect" href="https://api.coingecko.com">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"NETRA AI","url":"https://netraai.xyz","logo":"https://netraai.xyz/logo.png","sameAs":["https://x.com/NETRAAI_BSC","https://t.me/NetraAIofficial"],"description":"Community-driven AI meme token on BNB Smart Chain."}
+{"@context":"https://schema.org","@type":"Organization","name":"NETRA AI","url":"https://netraai.xyz","logo":"https://netraai.xyz/logo.png","sameAs":["https://x.com/NETRAAI_BSC","https://t.me/NetraAICommunity"],"description":"Community-driven AI meme token on BNB Smart Chain."}
 </script>
 <style>
 :root{--bg:#020609;--panel:rgba(4,18,22,.78);--panel2:rgba(2,13,17,.92);--cyan:#00f5ff;--green:#00ff88;--yellow:#f0b90b;--blue:#2f80ed;--text:#f5fbff;--muted:#a9c5ca;--line:rgba(0,245,255,.26);--radius:22px}
@@ -46,12 +46,96 @@
 .ai-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}.system-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}.system-row:last-child{border-bottom:0}.system-row span{color:var(--muted)}.system-row b{color:var(--green)}.score-card{display:grid;place-items:center;text-align:center;min-height:300px}.score-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0 78%,rgba(0,245,255,.12) 78%);position:relative;box-shadow:0 0 30px rgba(0,245,255,.22)}.score-ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:#031014}.score-ring div{position:relative;z-index:2}.score-ring b{display:block;font-size:42px}.score-ring span{font-size:12px;color:var(--muted)}.supply-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}.supply-card{display:grid;place-items:center;text-align:center;min-height:310px}.supply-ring{width:205px;height:205px;border:16px solid rgba(0,245,255,.16);border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 25px rgba(0,245,255,.12),0 0 28px rgba(0,245,255,.12)}.supply-ring b{display:block;font-size:42px;color:var(--cyan)}.supply-ring span{color:var(--muted)}.fact-list{display:grid;gap:10px}.fact{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border:1px solid var(--line);border-radius:13px;background:#06161b}.fact span{color:var(--muted)}.fact code{word-break:break-all;color:var(--cyan);text-align:right}.infrastructure{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.infra{text-align:center;text-decoration:none}.infra b{display:block;color:var(--cyan);font-size:18px;margin-bottom:7px}.infra span{color:var(--muted);font-size:13px}.faq{display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,var(--panel2),var(--panel));padding:0 18px}.faq summary{cursor:pointer;font-weight:900;padding:18px 0}.faq details p{margin:0 0 18px;color:var(--muted);line-height:1.7}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}@media(max-width:900px){.ai-grid,.supply-layout{grid-template-columns:1fr}.infrastructure{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.infrastructure{grid-template-columns:1fr}}
 .logo-wrap{position:relative;animation:logoPulse 2.8s ease-in-out infinite}.logo-wrap::before,.logo-wrap::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(0,245,255,.35);box-shadow:0 0 22px rgba(0,245,255,.34);animation:logoRing 2.8s ease-in-out infinite;pointer-events:none}.logo-wrap::after{inset:-20px;opacity:.45;animation-delay:1.4s}.logo-wrap img{filter:drop-shadow(0 0 14px rgba(0,245,255,.55))}@keyframes logoPulse{0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(0,245,255,.24)}50%{transform:scale(1.025);box-shadow:0 0 46px rgba(0,245,255,.48)}}@keyframes logoRing{0%,100%{transform:scale(.97);opacity:.35}50%{transform:scale(1.05);opacity:.9}}
 .chart{position:relative;min-height:520px;background:radial-gradient(circle at 50% 35%,rgba(0,245,255,.08),transparent 38%),#05090c}.chart::before{content:"Loading live NETRA / WBNB chart…";position:absolute;inset:0;display:grid;place-items:center;color:#9dcbd0;font-size:14px;letter-spacing:.04em;z-index:0}.chart.loaded::before{display:none}.chart iframe{position:relative;z-index:1;opacity:0;transition:opacity .55s ease,filter .55s ease;filter:saturate(.9) contrast(.97)}.chart.loaded iframe{opacity:1;filter:saturate(1.06) contrast(1.03)}.chart-badge{position:absolute;top:14px;right:14px;z-index:3;display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(2,13,17,.88);color:var(--green);font-size:11px;font-weight:900;letter-spacing:.08em;pointer-events:none}.chart-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}.phase{position:relative;overflow:hidden;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}.phase::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 10%,rgba(0,245,255,.08),transparent 72%);transform:translateX(-120%);transition:transform .7s ease;pointer-events:none}.phase:hover{transform:translateY(-8px);border-color:rgba(0,245,255,.62);box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 26px rgba(0,245,255,.18)}.phase:hover::before{transform:translateX(120%)}.phase.done:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(0,255,136,.22)}.phase.active:hover{box-shadow:0 24px 58px rgba(0,0,0,.38),0 0 28px rgba(240,185,11,.20)}.counter-card{position:relative;overflow:hidden}.counter-card::after{content:"";position:absolute;right:-36px;bottom:-46px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,255,.16),transparent 68%);pointer-events:none}.counter-value{display:block;font-size:29px;margin:10px 0 5px;font-variant-numeric:tabular-nums}#backToTop{position:fixed;right:18px;bottom:20px;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,rgba(5,29,35,.96),rgba(2,13,17,.96));color:var(--cyan);font-size:22px;font-weight:900;box-shadow:0 0 24px rgba(0,245,255,.23);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(14px);transition:.25s ease;z-index:80}#backToTop.show{opacity:1;visibility:visible;transform:none}#backToTop:hover{transform:translateY(-3px);box-shadow:0 0 32px rgba(0,245,255,.42)}@media(max-width:600px){.phase:hover{transform:none}.chart{min-height:430px}#backToTop{right:12px;bottom:14px;width:44px;height:44px}}@media(prefers-reduced-motion:reduce){.logo-wrap,.logo-wrap::before,.logo-wrap::after{animation:none!important}.phase,.phase::before,.chart iframe,#backToTop{transition:none!important}}#holderStatus a{text-decoration:none;color:#a9c5ca}#holderStatus a:hover{color:var(--cyan)}#mHolders{font-variant-numeric:tabular-nums}
+
+/* ===== TELEGRAM COMMUNITY QR ===== */
+.telegram-community-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:22px;align-items:center;padding:22px;border:1px solid rgba(0,245,255,.34);border-radius:18px;background:linear-gradient(135deg,rgba(0,136,204,.16),rgba(0,255,136,.07));box-shadow:0 0 28px rgba(0,245,255,.10)}
+.telegram-community-card h3{margin:0 0 9px;color:var(--cyan);font-size:22px}
+.telegram-community-card p{margin:0 0 14px;color:var(--muted);line-height:1.65}
+.telegram-community-card .telegram-open{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:12px;text-decoration:none;font-weight:900;background:linear-gradient(90deg,#00bfff,var(--cyan));color:#001014}
+.telegram-qr{width:150px;height:150px;padding:8px;border-radius:16px;background:#fff;box-shadow:0 0 22px rgba(0,245,255,.26)}
+.telegram-qr img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){.telegram-community-card{grid-template-columns:1fr;text-align:center}.telegram-qr{margin:auto}}
+
+
+/* ===== TELEGRAM COMMUNITY ONLY ===== */
+.telegram-community-card{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 170px;
+  gap:22px;
+  align-items:center;
+  padding:22px;
+  border:1px solid rgba(0,245,255,.34);
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(0,136,204,.16),rgba(0,255,136,.07));
+  box-shadow:0 0 28px rgba(0,245,255,.10);
+}
+.telegram-community-card h3{
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-size:22px;
+}
+.telegram-community-card p{
+  margin:0 0 14px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.telegram-community-card .telegram-link{
+  display:inline-block;
+  margin:0 0 14px;
+  color:#dffcff;
+  font-weight:800;
+  word-break:break-all;
+}
+.telegram-community-card .telegram-open{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 18px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:900;
+  background:linear-gradient(90deg,#00bfff,var(--cyan));
+  color:#001014;
+}
+.telegram-qr{
+  width:170px;
+  height:170px;
+  padding:9px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 0 22px rgba(0,245,255,.26);
+}
+.telegram-qr img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.telegram-qr-label{
+  margin-top:8px;
+  text-align:center;
+  font-size:11px;
+  font-weight:800;
+  color:var(--muted);
+}
+@media(max-width:600px){
+  .telegram-community-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .telegram-qr{
+    margin:auto;
+  }
+}
+
 </style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
 <nav class="navbar"><div class="container nav-inner"><a class="brand" href="#home"><img src="logo.png" alt="NETRA AI logo"><span>NETRA AI</span></a><button class="menu" id="menu">☰</button><div class="nav-links" id="nav"><a href="#market">Market</a><a href="#about">About</a><a href="#dashboard">Dashboard</a><a href="#roadmap">Roadmap</a><a href="#news">News</a><a href="#faq">FAQ</a><a href="whitepaper.html">Whitepaper</a></div></div></nav>
-<header class="hero" id="home"><div class="container"><div class="hero-card"><div class="logo-wrap"><img src="logo.png" alt="NETRA AI"></div><div class="hero-kicker">Artificial Intelligence • BNB Smart Chain • Community Powered</div><h1>NETRA AI</h1><div style="margin:8px 0 2px;font-size:clamp(18px,3vw,27px);font-weight:900;color:#ffffff">AI Meme Token on <span style="color:var(--yellow);text-shadow:0 0 12px rgba(240,185,11,.38)">BNB Chain</span></div><div class="status"><span class="dot"></span>AI SYSTEM ONLINE</div><p class="hero-text">NETRA AI is a community-driven AI meme token built on BNB Smart Chain, combining blockchain innovation, artificial intelligence and a growing global community.</p><div class="actions"><a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener">🚀 Buy NETRA</a><a class="btn" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener">📈 Live Chart</a><a class="btn" href="https://t.me/NetraAIofficial" target="_blank" rel="noopener">💬 Telegram</a><a class="btn" href="https://x.com/NETRAAI_BSC" target="_blank" rel="noopener">𝕏 Follow</a><a class="btn" href="whitepaper.html">📖 Whitepaper</a></div><div class="contract"><div><small>OFFICIAL CONTRACT</small><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div><button class="copy" id="copy">Copy</button></div></div></div></header>
+<header class="hero" id="home"><div class="container"><div class="hero-card"><div class="logo-wrap"><img src="logo.png" alt="NETRA AI"></div><div class="hero-kicker">Artificial Intelligence • BNB Smart Chain • Community Powered</div><h1>NETRA AI</h1><div style="margin:8px 0 2px;font-size:clamp(18px,3vw,27px);font-weight:900;color:#ffffff">AI Meme Token on <span style="color:var(--yellow);text-shadow:0 0 12px rgba(240,185,11,.38)">BNB Chain</span></div><div class="status"><span class="dot"></span>AI SYSTEM ONLINE</div><p class="hero-text">NETRA AI is a community-driven AI meme token built on BNB Smart Chain, combining blockchain innovation, artificial intelligence and a growing global community.</p><div class="actions"><a class="btn primary" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener">🚀 Buy NETRA</a><a class="btn" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener">📈 Live Chart</a><a class="btn" href="https://t.me/NetraAICommunity" target="_blank" rel="noopener">💬 Telegram</a><a class="btn" href="https://x.com/NETRAAI_BSC" target="_blank" rel="noopener">𝕏 Follow</a><a class="btn" href="whitepaper.html">📖 Whitepaper</a></div><div class="contract"><div><small>OFFICIAL CONTRACT</small><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div><button class="copy" id="copy">Copy</button></div></div></div></header>
 <div class="ticker"><div class="container ticker-grid"><div class="tick"><span>BTC</span><b id="btcP">Loading…</b><em id="btcC"></em></div><div class="tick"><span>ETH</span><b id="ethP">Loading…</b><em id="ethC"></em></div><div class="tick"><span>BNB</span><b id="bnbP">Loading…</b><em id="bnbC"></em></div><div class="tick"><span>NETRA</span><b id="netraP">Loading…</b><em id="netraC"></em></div></div></div>
 <main>
 <section id="market"><div class="container"><div class="head"><div><span class="kicker">Live data</span><h2>NETRA market dashboard</h2></div><p>Public market values are loaded from DEX Screener. Values may be unavailable during provider outages.</p></div><div class="grid"><div class="card metric"><span>Price</span><b id="mPrice">—</b><small id="mChange">24h change —</small></div><div class="card metric counter-card"><span>Liquidity</span><b class="counter-value" id="mLiq" data-value="0">—</b><small>Pool liquidity</small></div><div class="card metric counter-card"><span>Market Cap</span><b class="counter-value" id="mCap" data-value="0">—</b><small>Live market valuation</small></div><div class="card metric counter-card"><span>Holders</span><b class="counter-value" id="mHolders" data-value="0">Loading…</b><small id="holderStatus"><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7#balances" target="_blank" rel="noopener">Auto-updating from BscScan ↗</a></small></div><div class="card metric"><span>24h volume</span><b id="mVol">—</b><small>Trading volume</small></div><div class="card metric"><span>24h transactions</span><b id="mTx">—</b><small>Buys + sells</small></div><div class="card metric"><span>FDV</span><b id="mFdv">—</b><small>Fully diluted valuation</small></div><div class="card metric"><span>Pair</span><b style="font-size:22px">NETRA / WBNB</b><small>PancakeSwap V2</small></div></div><div class="chart" id="chartBox"><div class="chart-badge">LIVE DEX DATA</div><iframe id="dexChart" title="NETRA DEX Screener chart" src="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A?embed=1&theme=dark&trades=0&info=0" loading="lazy"></iframe></div></div></section>
@@ -112,7 +196,20 @@
 <section id="tokenomics"><div class="container"><div class="head"><div><span class="kicker">Token information</span><h2>Supply & on-chain facts</h2></div><p>No invented allocation chart is shown. Current holder distribution should always be verified directly on BscScan.</p></div><div class="supply-layout"><div class="card supply-card"><div class="supply-ring"><div><b>1B</b><span>Total NETRA supply</span></div></div></div><div class="card fact-list"><div class="fact"><span>Name</span><b>NETRA AI</b></div><div class="fact"><span>Symbol</span><b>NETRA</b></div><div class="fact"><span>Network</span><b>BNB Smart Chain</b></div><div class="fact"><span>Standard</span><b>BEP-20</b></div><div class="fact"><span>Decimals</span><b>18</b></div><div class="fact"><span>Contract</span><code>0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7</code></div></div></div></div></section>
 <section class="alt" id="infrastructure"><div class="container"><div class="head"><div><span class="kicker">Infrastructure</span><h2>Public services used by NETRA AI</h2></div><p>These are infrastructure and tracking services, not claims of commercial partnership.</p></div><div class="infrastructure"><a class="card infra" href="https://www.bnbchain.org/" target="_blank" rel="noopener"><b>BNB Chain</b><span>Blockchain network</span></a><a class="card infra" href="https://pancakeswap.finance/swap?outputCurrency=0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>PancakeSwap</b><span>DEX trading</span></a><a class="card infra" href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank" rel="noopener"><b>DEX Screener</b><span>Market tracking</span></a><a class="card infra" href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank" rel="noopener"><b>BscScan</b><span>On-chain explorer</span></a></div></div></section>
 <section id="faq"><div class="container"><div class="head"><div><span class="kicker">FAQ</span><h2>Common questions</h2></div><p>Quick answers for new visitors.</p></div><div class="faq"><details><summary>What is NETRA AI?</summary><p>NETRA AI is a community-driven AI-themed BEP-20 token on BNB Smart Chain.</p></details><details><summary>Where can I buy NETRA?</summary><p>NETRA trades through PancakeSwap V2. Always use the official contract shown on this website.</p></details><details><summary>What is the total supply?</summary><p>The total supply is 1,000,000,000 NETRA with 18 decimals.</p></details><details><summary>How can I verify the contract?</summary><p>Open the official BscScan link and confirm the full contract address.</p></details><details><summary>Is NETRA guaranteed to increase in price?</summary><p>No. Cryptoassets are volatile and no return, listing, liquidity target or roadmap milestone is guaranteed.</p></details><details><summary>Does the project control every large holder?</summary><p>No. Independent wallets may buy, hold, transfer or sell tokens without project control. Check holder distribution on BscScan.</p></details></div></div></section>
-<section class="alt" id="community"><div class="container community"><div><span class="kicker">Official channels</span><h2>Join NETRA AI</h2><p style="color:var(--muted);line-height:1.8">Only trust links published on this website. Administrators will never request your seed phrase or private key.</p></div><div class="community-links"><a href="https://t.me/NetraAIofficial" target="_blank">Telegram ↗</a><a href="https://x.com/NETRAAI_BSC" target="_blank">X / Twitter ↗</a><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank">BscScan ↗</a><a href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank">DEX Screener ↗</a></div></div></section>
+<section class="alt" id="community"><div class="container community"><div><span class="kicker">Official channels</span><h2>Join NETRA AI</h2><p style="color:var(--muted);line-height:1.8">Only trust links published on this website. Administrators will never request your seed phrase or private key.</p></div><div class="community-links"><div class="telegram-community-card">
+  <div>
+    <h3>✈️ NETRA AI Telegram Community</h3>
+    <p>Join the official NETRA AI community for project updates, announcements and community discussions.</p>
+    <a class="telegram-link" href="https://t.me/NetraAICommunity" target="_blank" rel="noopener">t.me/NetraAICommunity</a><br>
+    <a class="telegram-open" href="https://t.me/NetraAICommunity" target="_blank" rel="noopener">Join Telegram ↗</a>
+  </div>
+  <div>
+    <a class="telegram-qr" href="https://t.me/NetraAICommunity" target="_blank" rel="noopener" aria-label="Open NETRA AI Telegram Community">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYAQAAAACv9dQhAAABp0lEQVR4nO2Z22rEQAxDj0r//5fVB8tJthT2qV5DkoUkOwgijEa+jMzb6+s95ME8mAfzx/UNqF6NsCyj+pPVdZyn44MBVBFRGZLcq/s4j8enBFMCAtkVJSVy2zh/FCOsFtEGPoswatdRm89n+WzA1P4quVgGV2jkXt3HeTw+UYssQ+UwcWpoG+dJzKvTIIMsHv+5YJRfeTNuH2oNbeQ8hcE24DzxRTrGxvY2zh/w54jHyKl6ZClevY3ztP+0B1V7URmsS0QP81mKKf2UdmSMLga0lPMgRrWfoh38etvJeQbzTVovREqfdGCdwvZxnsdY+OhIe2cdAtrJeQaT/j2te0SULsOJ0jbO45iYjipOOodjevyHUo/j0baywjFE3MZ5vP9Kx9W3Ck1XjPs4z9eHPXOOEUU+3Wps4zyf35Phk957sqo8t3Ee9596tbvZiBmRBmwb5/H8fpxUpL+QewT05C+A03zo2qfz1939+Yo5pvNW19O3188V0zUzfRSWPLaZ839jXs8vAGOde+v2+6vnqnSar2nrOd64+Xz11/nFv37rwTyYu2F+AI6iuDFoWLqbAAAAAElFTkSuQmCC" alt="QR code for NETRA AI Telegram Community">
+    </a>
+    <div class="telegram-qr-label">Scan to join @NetraAICommunity</div>
+  </div>
+</div><a href="https://x.com/NETRAAI_BSC" target="_blank">X / Twitter ↗</a><a href="https://bscscan.com/token/0xd70cE44E1e7fe884235ECCbb47C262c353D2F2e7" target="_blank">BscScan ↗</a><a href="https://dexscreener.com/bsc/0xD0545ba3fAfA899B44a261d23f95f47D958aEE6A" target="_blank">DEX Screener ↗</a></div></div></section>
 <section><div class="container"><div class="card disclaimer"><h3>⚠️ Risk disclosure</h3><p>NETRA AI is a community-driven cryptoasset. Crypto markets are highly volatile and participants may lose some or all of their funds. Liquidity can change quickly and large independent holders may create sell-pressure risk. This website is informational only and does not provide financial, legal or tax advice. Listings, prices, holder targets, liquidity targets and roadmap milestones are not guaranteed.</p></div></div></section>
 </main>
 <footer style="border-top:1px solid rgba(255,255,255,.08);padding:28px 0;text-align:center"><div style="font-size:18px;font-weight:700;color:#ffffff">© 2026 NETRA AI. All Rights Reserved.</div><div style="margin-top:8px;font-size:14px;color:#d6d6d6">Powered by Community • Built on BNB Smart Chain</div></footer><button id="backToTop" aria-label="Back to top" title="Back to top">↑</button><div class="toast" id="toast">Contract copied</div>
